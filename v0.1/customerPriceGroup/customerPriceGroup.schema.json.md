@@ -3,7 +3,6 @@
 #### `id`
 ID of the customer price group
 
-
 #### `code`
 Hash of the customer content for change detection.
 
@@ -13,7 +12,7 @@ Hash of the customer content for change detection.
 
 #### `description`
 ##### TODOs:
-* Is it a good idea to call this description, would descriptio not imply some longer, probably multiline text, or is `name`the better wording here
+* Is it a good idea to call this description, would description not imply some longer, probably multiline text, or is `name`the better wording here
 
 #### `erpTenantIds`
 BC will restructure data in a way that customerPriceGroups are global entities with reference to tenatns.

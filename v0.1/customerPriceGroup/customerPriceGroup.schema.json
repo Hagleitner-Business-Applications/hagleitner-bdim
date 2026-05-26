@@ -14,18 +14,18 @@
         "id": {
             "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
             "description": "The unique identifier for the customer price group.",
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "code": {
             "$ref": "../components/baseTypes.schema.json#/$defs/code",
             "maxLength": 20,
             "description": "The unique code for the responsibility center.",
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "description": {
             "$ref": "../components/baseTypes.schema.json#/$defs/localizedText",
             "description": "Description of the customer price group.",
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "erpTenantIds": {
             "type": "array",
@@ -34,12 +34,12 @@
             },
             "description": "UUIDs of the ERP tenants associated with this customer. These Ids must be set by the owning system.",
             "minItems": 1,
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "activeForPriceBookCustomer": { 
             "type": "boolean",
             "description": "Indicates whether the customer price group is active for price book customers.",
-            "x-status": "needsDiscussion",
+            "x-status": "approved",
             "default": false
         }
     }
