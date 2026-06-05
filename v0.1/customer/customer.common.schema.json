@@ -81,7 +81,7 @@
         },
         "languageTag": {
             "$ref": "../components/baseTypes.schema.json#/$defs/languageTag",
-            "description": "A BCP 47 language tag that identifies the language context, often including region or script. The languag tag is used as the key for resolving a locale or culture with concrete formatting conventions.",
+            "description": "A BCP47 language tag that identifies the language context, often including region or script. The language tag is used as the key for resolving a locale or culture with concrete formatting conventions.",
             "x-status": "approved"
         },
         "timezone": {
@@ -177,7 +177,8 @@
                             "description": "UUID of the ancestor invoice recipient customer.",
                             "x-status": "approved"
                         }
-                    }
+                    },
+                    "x-status": "approved"
                 },
                 "conditionOwner": {
                     "type": "object",
@@ -205,9 +206,11 @@
                     "properties": {
                         "ancestorCustomerId": {
                             "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                            "description": "UUID of the ancestor hierarchy parent customer."
+                            "description": "UUID of the ancestor hierarchy parent customer.",
+                            "x-status": "approved"
                         }
-                    }
+                    },
+                    "x-status": "approved"
                 }
             },
             "x-status": "approved"
@@ -263,7 +266,7 @@
         "defaultCustomerReference": {
             "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 35,
-            "description": "Reference to use on invoices and other documents when the customer provies no specific reference.",
+            "description": "Reference to use on invoices and other documents when the customer provides no specific reference.",
             "x-status": "approved"
         },
         "requestForErpCustomerBlock": {
@@ -275,19 +278,23 @@
             "type": "object",
             "description": "Information about our contact persons at the customer's organization.",
             "properties": {
-                "salespersonEployeeId": {
+                "salesPersonEmployeeId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "UUID of the salesperson employee who is responsible for the customer."
+                    "description": "UUID of the salesperson employee who is responsible for the customer.",
+                    "x-status": "approved"
                 },
                 "advisorId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "UUID of the advisor employee who is responsible for the customer."
+                    "description": "UUID of the advisor employee who is responsible for the customer.",
+                    "x-status": "approved"
                 },
                 "personInChargeId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "UUID of the person in charge employee who is responsible for the customer."
+                    "description": "UUID of the person in charge employee who is responsible for the customer.",
+                    "x-status": "approved"
                 }
-            }
+            },
+            "x-status": "approved"
         },
         "shippingAgentCode": {
             "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
@@ -300,76 +307,94 @@
             "properties": {
                 "salesClass": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 10
+                    "maxLength": 10,
+                    "x-status": "approved"
                 },
                 "potential": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 10
+                    "maxLength": 10,
+                    "x-status": "approved"
                 },
                 "divisionCode": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 10
+                    "maxLength": 10,
+                    "x-status": "approved"
                 },
                 "subdivisionCode": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "x-status": "approved"
                 }
-            }
+            },
+            "x-status": "approved"
         },
         "billingAndPayment": {
             "type": "object",
             "properties": {
                 "customerPriceGroupId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "UUID referencing the customer price group that is assigned to the customer."
+                    "description": "UUID referencing the customer price group that is assigned to the customer.",
+                    "x-status": "approved"
                 },
                 "isPriceGroupCustomer": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "priceBookGroupId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "can only be set if the isPriceGroupCustomer is set to true"
+                    "description": "can only be set if the isPriceGroupCustomer is set to true",
+                    "x-status": "approved"
                 },
                 "ignoreMaterialSurcharge": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "excludeFromMinQuantitySurcharge": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "salesOnlyWithSpecialPrice": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "orderLimitActive": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "combineShipments": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "purchasingAssociation": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "bundleReturn": {
                     "type": "boolean",
-                    "default": false
+                    "default": false,
+                    "x-status": "approved"
                 },
                 "paymentTermsId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                    "description": "UUID referencing the payment terms assigned to the customer."
+                    "description": "UUID referencing the payment terms assigned to the customer.",
+                    "x-status": "approved"
                 },
                 "paymentMethodCode": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 10
+                    "maxLength": 10,
+                    "x-status": "approved"
                 },
                 "creditStandingCode": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
-                    "maxLength": 10
+                    "maxLength": 10,
+                    "x-status": "approved"
                 },
                 "creditStandingCheckStatus": {
                     "type": "string",
@@ -378,11 +403,13 @@
                         "CheckNecessary",
                         "CheckRequested",
                         "Checked"
-                    ]
+                    ],
+                    "x-status": "approved"
                 },
                 "creditStandingCheckDate": {
                     "type": "string",
-                    "format": "date-time"
+                    "format": "date-time",
+                    "x-status": "approved"
                 }
             },
             "allOf": [
@@ -447,14 +474,16 @@
                     "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 },
-                "billersInvoiceRecipeintId": {
+                "billersInvoiceRecipientId": {
                     "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 }
-            }
+            },
+            "x-status": "approved"
         },
         "openingHours": {
-            "$ref": "../components/openinghours.schema.json"
+            "$ref": "../components/openingHours.schema.json",
+            "x-status": "needsDiscussion"
         },
         "createdAt": {
             "type": "string",
@@ -481,7 +510,7 @@
         "contentHash": {
             "type": "string",
             "description": "Hash value calculated by the owning system based on the content of the customer record. The content hash is used to detect changes in the customer record and to determine whether updates are needed when synchronizing customer data across systems.",
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         }
     },
     "allOf": [
@@ -514,7 +543,7 @@
         "name2": [
             "name1"
         ],
-        "blockedForReasonId": [
+        "blockedForReason": [
             "blockedFor"
         ]
     }

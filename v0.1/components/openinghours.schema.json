@@ -1,7 +1,6 @@
 {
     "$id": "https://schema.hagleitner.com/bdim/v0.1/openinghours.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "x-revision": "2026-06-05",
     "description": "Generic schema for opening hours with multiple date intervals and multiple opening time slots per day.",
     "type": "object",
     "unevaluatedProperties": false,
