@@ -9,13 +9,10 @@
 ### `id`
 We use a UUID since the ownership of the customer entity will change in future, and in the transition phase multiple systems will provide customers (namely BC and HsM), therfore a UUID is favored over a simple sequential integer IDs. Additionally BC already has a UUID for each customer (and for each tenant).
 
-### `owningSystem` 
-The owning system is used to distinguish different owners of the common schema. The ownership is allowed to change (e.g. phase 2).
-
 ### `erpTenantId`
 Given to make the life of the ERP easier, i.e. an erp attribute stored in the BDIM.
 
-The CRM must implement a logic that determines the correct tenat. Could be the 1st level reseller on the reseller relationship path.
+When customers are created in the CRM the CRM must implement a logic that determines the correct tenat. Could be the 1st level reseller on the reseller relationship path.
  
 ### `name1`, `name2`, `name3`
 Name of the customer, split in up to 3 parts for printing postal addresses.
@@ -25,54 +22,25 @@ Name of the customer, split in up to 3 parts for printing postal addresses.
 Phone numbers of the customer
 (Business) Phone number validation should be performed by the owner
 
-### `emailAddresses{}`
+### `emailAddress`
 We use an object containing multiple email address properties, each of them having a defined semantic.
 
-#### TODO
-* (Business) is at least one e-mail address mandatory?
-* (Business) are the invoicing e-mail addresses really adrresse that can only be managed in CRM (in future)
-* (CRM) There is a specific logic in the ERP system when to use what email address and also what to fallback to, in case a needed address is not filled.
-
-### `statusCode`
-
-Noe:
-* Propagated statusCodes in BC may lead to only eventually consistent dat in the CRM.
-* Interpretation of statusCode is up to the system that has the data.
-
-### `statusCodeReason`
-#### TODO
-* Provide Valid list of status codes
-
 ### `blockedFor`
+Enumeration
 
 ### ``blockedForReason``
 Separate entity
 
-#### TODO: 
-* (ERP) UUIDs
-* Definition of Entity
-* Multilanguage?
-* QUeue structure (one event topic for multiple owned entities?)
-
+*Warning*: Single language only
 
 ### `languageTag`
-While this is the BCP47 language tag, it is also used to derive the locale or culture with formatting conventions. 
+BCP47 language tag, it is also used to derive the locale or culture with formatting conventions. 
 
 ### `timezone`
 Only canonical IANA timeZones are allowed
 
-### `taxIdentificationNumber`
-Rationale:
-* VAT is Europe only
+### `taxNumbers`
 
-#### TODO
-* Structure: Object with named tax number properties, Array with tagged tax numbers
-* (Business) Who owns all the tax numbers / BC vs CRM
-* (Business) Validation of tax numbers (e.g. automated online check)
-
-Candidates:
-
-* Reseller
 
 ### `roles[]`
 Instead of using individual flags like `isReseller`, roles provide a more abstract and extensible model for associating customers with one or more roles. Roles might also have role-spcific data models, which—if necessary—are modelled as separate entities.

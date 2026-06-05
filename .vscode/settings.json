@@ -18,5 +18,12 @@
       ],
       "url": "./v0.1/customerPriceGroup/customerPriceGroup.schema.json"
     },
+    {
+      "fileMatch": [
+        "**/v0.1/**/components/openingHours.example*.json"
+      ],
+      "url": "./v0.1/components/openingHours.schema.json"
+    },
+
   ]
 }

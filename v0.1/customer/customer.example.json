@@ -8,22 +8,17 @@
   "name3": null,
   "phoneNumber1": "+431234567890",
   "phoneNumber2": "+431234567891",
-  "emailAddresses": {
-    "primary": "office@acme.com",
-    "orderConfirmation": "orders@acme.com",
-    "invoice": "invoicing@acme.com",
-    "invoiceCc": "accounting@acme.com",
-    "paymentReminder": "finance@acme.com",
-    "paymentReminderCc": null,
-    "shippingAdvice": "warehouse@acme.com"
-  },
-  "statusCode": "active",
+  "emailAddress": "office@acme.com",
   "blockedFor": "shipping",
   "blockedForReason": "51282897-0fc7-4657-8eab-e10ed413eef9",
   "languageTag": "de-AT",
   "timezone": "Europe/Vienna",
-  "taxIdentificationNumber": "ATU12345678",
-  "roles": ["reseller"],
+  "taxNumbers": {
+    "vatNumber": "ATU12345678"
+  },
+  "roles": [
+    "reseller"
+  ],
   "customerRelations": {
     "reseller": {
       "ancestorCustomerId": "37f24a85-5a03-4a16-8958-b8c3024e9294"
@@ -38,6 +33,36 @@
       "ancestorCustomerId": "03e1bd90-398b-4d4b-b860-e7741695eac5"
     }
   },
+  "openingHours": {
+    "intervals": [
+      {
+        "startingDate": "2026-01-01",
+        "endingDate": "2026-12-31",
+        "days": [
+          {
+            "opensAt": "08:00",
+            "closesAt": "16:00",
+            "weekdays": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ]
+          }
+        ]
+      }
+    ],
+    "closingDays": [
+      {
+        "startAt": "2026-12-24T12:00:00Z",
+        "endAt": "2026-12-26T23:59:59Z",
+        "seasonCode": null,
+        "area": null,
+        "reason": "Christmas closure"
+      }
+    ]
+  },
   "address1": "Musterstraße 1",
   "address2": null,
   "postalCode": "9000",
@@ -46,7 +71,7 @@
   "countryCode": "AT",
   "geoLocation": {
     "latitude": 47.202778,
-    "longitude": 14.280833  
+    "longitude": 14.280833
   },
   "createdAt": "2025-03-15T08:30:00Z",
   "updatedAt": "2025-03-20T12:15:00+02:00",

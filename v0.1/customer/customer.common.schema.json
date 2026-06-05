@@ -7,7 +7,6 @@
     "required": [
         "id",
         "name1",
-        "statusCode",
         "customerRelations",
         "languageTag",
         "createdAt",
@@ -19,19 +18,10 @@
             "description": "UUID uniquely identifying the customer.",
             "x-status": "approved"
         },
-        "owningSystem": {
-            "type": "string",
-            "enum": [
-                "CRM",
-                "ERP"
-            ],
-            "description": "The system that owns the customer record. Only the owning system is allowed to set and update the content of the customer record, other systems can only read the record and may not update it. The owning system is responsible for setting the contentHash property based on the content of the customer record.",
-            "x-status": "needsDiscussion"
-        },
         "erpTenantId": {
             "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
             "description": "UUID of the ERP tenant associated with this customer. This Id must be set by the owning system.",
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "name1": {
             "$ref": "../components/baseTypes.schema.json#/$defs/singleLineText",
@@ -63,31 +53,12 @@
         },
         "emailAddress": {
             "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-            "description": "Email addresses with defined semantics for different communication purposes.",
+            "description": "Email address of the customer.",
             "x-status": "approved"
-        },
-        "statusCode": {
-            "type": "string",
-            "enum": [
-                "active",
-                "inactive"
-            ],
-            "description": "The status of the customer",
-            "default": "active",
-            "x-status": "approved"
-        },
-        "statusCodeReason": {
-            "type": "string",
-            "enum": [
-                "TBD"
-            ],
-            "description": "The reason for the inactive statu code",
-            "default": "active",
-            "x-status": "needsDiscussion"
         },
         "responsibilityCenterId": {
             "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-            "description": "UUID referencing the responsibility center that is assigned to the customer.",
+            "description": "UUID referencing the responsibility center that this customer is assigned to.",
             "x-status": "approved"
         },
         "blockedFor": {
@@ -102,12 +73,11 @@
             "description": "Defines what cannot be done for the customer.",
             "x-status": "approved"
         },
-        "blockedForReasonId": {
+        "blockedForReason": {
             "type": "string",
-            "format": "uuid",
-            "description": "UUID referencing the reason why the customer is blocked. ",
-            "x-status": "needsDiscussion"
-
+            "description": "Descriptive reason for the block on the customer.",
+            "maxLength": 60,
+            "x-status": "approved"
         },
         "languageTag": {
             "$ref": "../components/baseTypes.schema.json#/$defs/languageTag",
@@ -121,9 +91,40 @@
             "default": "Etc/UTC",
             "x-status": "approved"
         },
-        "taxIdentificationNumber": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
-            "description": "The customer's VAT identification number, starting with a two-letter country code followed by alphanumeric characters.",
+        "taxNumbers": {
+            "type": "object",
+            "properties": {
+                "vatNumber": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 20,
+                    "x-status": "approved"
+                },
+                "eoriNumber": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 40,
+                    "x-status": "approved"
+                },
+                "taxNumber1": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 50,
+                    "x-status": "approved"
+                },
+                "taxNumber2": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 80,
+                    "x-status": "approved"
+                },
+                "taxNumber3": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 30,
+                    "x-status": "approved"
+                },
+                "taxNumber4": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 30,
+                    "x-status": "approved"
+                }
+            },
             "x-status": "approved"
         },
         "roles": {
@@ -137,7 +138,7 @@
             "uniqueItems": true,
             "description": "Roles assigned to the customer",
             "minItems": 1,
-            "x-status": "needDiscussion"
+            "x-status": "approved"
         },
         "customerRelations": {
             "type": "object",
@@ -157,9 +158,11 @@
                     "properties": {
                         "ancestorCustomerId": {
                             "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                            "description": "UUID of the ancestor reseller customer, null only for the root customer."
+                            "description": "UUID of the ancestor reseller customer, null only for the root customer.",
+                            "x-status": "approved"
                         }
-                    }
+                    },
+                    "x-status": "approved"
                 },
                 "invoiceRecipient": {
                     "type": "object",
@@ -171,7 +174,8 @@
                     "properties": {
                         "ancestorCustomerId": {
                             "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                            "description": "UUID of the ancestor invoice recipient customer."
+                            "description": "UUID of the ancestor invoice recipient customer.",
+                            "x-status": "approved"
                         }
                     }
                 },
@@ -185,9 +189,11 @@
                     "properties": {
                         "ancestorCustomerId": {
                             "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
-                            "description": "UUID of the ancestor condition owner customer."
+                            "description": "UUID of the ancestor condition owner customer.",
+                            "x-status": "approved"
                         }
-                    }
+                    },
+                    "x-status": "approved"
                 },
                 "parent": {
                     "type": "object",
@@ -204,7 +210,251 @@
                     }
                 }
             },
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
+        },
+        "homepage": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri",
+            "maxLength": 80,
+            "description": "The customer's homepage URL.",
+            "x-status": "approved"
+        },
+        "currency": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "pattern": "^[A-Z]{3}$",
+            "description": "The ISO 4217 currency code representing the customer's default currency.",
+            "x-status": "approved"
+        },
+        "shippingInstruction": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "Partial",
+                "Complete",
+                null
+            ],
+            "description": "Special instructions for shipping to the customer.",
+            "x-status": "approved"
+        },
+        "isPremiumCustomer": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the customer is classified as a premium customer.",
+            "x-status": "approved"
+        },
+        "salesFunnelStage": {
+            "type": "string",
+            "enum": [
+                "NewCustomer",
+                "ExistingCustomer",
+                "TargetCustomer"
+            ],
+            "description": "The sales funnel stage of the customer (from the ERP).",
+            "x-status": "approved"
+        },
+        "defaultCustomerReference": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 35,
+            "description": "Reference to use on invoices and other documents when the customer provies no specific reference.",
+            "x-status": "approved"
+        },
+        "requestForErpCustomerBlock": {
+            "type": "boolean",
+            "description": "Indicates whether there is a request to block the customer in the ERP system.",
+            "x-status": "approved"
+        },
+        "ourContactPersons": {
+            "type": "object",
+            "description": "Information about our contact persons at the customer's organization.",
+            "properties": {
+                "salespersonEployeeId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "UUID of the salesperson employee who is responsible for the customer."
+                },
+                "advisorId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "UUID of the advisor employee who is responsible for the customer."
+                },
+                "personInChargeId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "UUID of the person in charge employee who is responsible for the customer."
+                }
+            }
+        },
+        "shippingAgentCode": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Code identifying the customer's shipping agent.",
+            "x-status": "approved"
+        },
+        "classifications": {
+            "type": "object",
+            "properties": {
+                "salesClass": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 10
+                },
+                "potential": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 10
+                },
+                "divisionCode": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 10
+                },
+                "subdivisionCode": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 20
+                }
+            }
+        },
+        "billingAndPayment": {
+            "type": "object",
+            "properties": {
+                "customerPriceGroupId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "UUID referencing the customer price group that is assigned to the customer."
+                },
+                "isPriceGroupCustomer": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "priceBookGroupId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "can only be set if the isPriceGroupCustomer is set to true"
+                },
+                "ignoreMaterialSurcharge": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "excludeFromMinQuantitySurcharge": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "salesOnlyWithSpecialPrice": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "orderLimitActive": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "combineShipments": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "purchasingAssociation": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "bundleReturn": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "paymentTermsId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "description": "UUID referencing the payment terms assigned to the customer."
+                },
+                "paymentMethodCode": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 10
+                },
+                "creditStandingCode": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "maxLength": 10
+                },
+                "creditStandingCheckStatus": {
+                    "type": "string",
+                    "enum": [
+                        "NotChecked",
+                        "CheckNecessary",
+                        "CheckRequested",
+                        "Checked"
+                    ]
+                },
+                "creditStandingCheckDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "creditStandingCheckStatus": {
+                                "const": "Checked"
+                            }
+                        },
+                        "required": [
+                            "creditStandingCheckStatus"
+                        ]
+                    },
+                    "then": {
+                        "required": [
+                            "creditStandingCheckDate"
+                        ]
+                    },
+                    "else": {
+                        "not": {
+                            "required": [
+                                "creditStandingCheckDate"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "x-status": "approved"
+        },
+        "customerGroupMembership": {
+            "type": "object",
+            "properties": {
+                "customerGroupId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "x-status": "approved"
+                },
+                "membershipNumber": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "x-status": "approved"
+                },
+                "glnMembershipNumber": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "x-status": "approved"
+                },
+                "membershipSince": {
+                    "type": "string",
+                    "format": "date",
+                    "x-status": "approved"
+                },
+                "membershipUntil": {
+                    "type": "string",
+                    "format": "date",
+                    "x-status": "approved"
+                },
+                "bonusGroup": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "maxLength": 20,
+                    "x-status": "approved"
+                },
+                "purchaseGroup": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "x-status": "approved"
+                },
+                "billersInvoiceRecipeintId": {
+                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "x-status": "approved"
+                }
+            }
+        },
+        "openingHours": {
+            "$ref": "../components/openinghours.schema.json"
         },
         "createdAt": {
             "type": "string",
@@ -212,10 +462,20 @@
             "description": "RFC 3339 date-time when the customer was first created in the owning system.",
             "x-status": "approved"
         },
+        "createdById": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "description": "UUID of the employee who created the customer.",
+            "x-status": "approved"
+        },
         "updatedAt": {
             "type": "string",
             "format": "date-time",
             "description": "RFC 3339 date-time when the customer was last updated in the owning system.",
+            "x-status": "approved"
+        },
+        "updatedById": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+            "description": "UUID of the employee who last updated the customer.",
             "x-status": "approved"
         },
         "contentHash": {
@@ -245,27 +505,10 @@
             },
             "then": {
                 "required": [
-                    "blockedForReasonId"
+                    "blockedForReason"
                 ]
             }
-        },   
-        {
-            "if": {
-                "properties": {
-                    "statusCode": {
-                        "enum": ["inactive"]
-                    }
-                },
-                "required": [
-                    "statusCode"
-                ]
-            },
-            "then": {
-                "required": [
-                    "statusCodeReason"
-                ]
-            }
-        }          
+        }
     ],
     "dependentRequired": {
         "name2": [
@@ -274,5 +517,5 @@
         "blockedForReasonId": [
             "blockedFor"
         ]
-    }   
+    }
 }
