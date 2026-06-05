@@ -61,41 +61,10 @@
             "description": "Phone number 2",
             "x-status": "approved"
         },
-        "emailAddresses": {
-            "type": "object",
+        "emailAddress": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
             "description": "Email addresses with defined semantics for different communication purposes.",
-            "properties": {
-                "primary": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "Primary email address of the customer."
-                },
-                "orderConfirmation": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "Email address for order confirmations."
-                },
-                "invoice": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "Email address for invoices."
-                },
-                "invoiceCc": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "CC email address for invoices."
-                },
-                "paymentReminder": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "Email address for payment reminders."
-                },
-                "paymentReminderCc": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "CC email address for payment reminders."
-                },
-                "shippingAdvice": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
-                    "description": "Email address for shipping advice notifications."
-                }
-            },
-            "unevaluatedProperties": false,
-            "x-status": "needsDiscussion"
+            "x-status": "approved"
         },
         "statusCode": {
             "type": "string",
@@ -115,6 +84,11 @@
             "description": "The reason for the inactive statu code",
             "default": "active",
             "x-status": "needsDiscussion"
+        },
+        "responsibilityCenterId": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+            "description": "UUID referencing the responsibility center that is assigned to the customer.",
+            "x-status": "approved"
         },
         "blockedFor": {
             "type": "string",
@@ -243,6 +217,11 @@
             "format": "date-time",
             "description": "RFC 3339 date-time when the customer was last updated in the owning system.",
             "x-status": "approved"
+        },
+        "contentHash": {
+            "type": "string",
+            "description": "Hash value calculated by the owning system based on the content of the customer record. The content hash is used to detect changes in the customer record and to determine whether updates are needed when synchronizing customer data across systems.",
+            "x-status": "needsDiscussion"
         }
     },
     "allOf": [

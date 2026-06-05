@@ -36,7 +36,7 @@
             "minItems": 1,
             "x-status": "approved"
         },
-        "activeForPriceBookCustomer": { 
+        "activeForPriceBookCustomer": {
             "type": "boolean",
             "description": "Indicates whether the customer price group is active for price book customers.",
             "x-status": "approved",
