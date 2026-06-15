@@ -495,7 +495,8 @@
                 "$ref": "../components/address.schema.json"
             },
             "description": "List of addresses associated with the customer.",
-            "x-status": "approved"
+            "x-status": "draft",
+            "x-todo": "Consider whether we want to have a list of addresses or just one address with an addresstype to differentiate between billing and shipping address."
         },
         "createdAt": {
             "type": "string",
