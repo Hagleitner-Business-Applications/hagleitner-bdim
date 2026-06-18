@@ -1,0 +1,23 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm-event.responsibilitycenter-created.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-18",
+    "x-status": "draft",
+    "title": "ResponsibilityCenter Created Event",
+    "description": "This is the schema for responsibilitycenter created events sent from CRM to the service bus topic",
+    "allOf": [
+    {
+      "$ref": "../../messageEnvelope.schema.json"
+    },
+    {
+      "properties": {
+        "messageType": {
+          "const": "ResponsibilityCenterCreatedEvent"
+        },
+        "payload": {
+            "$ref": "../../../model/responsibilitycenter/responsibilitycenter.schema.json" }    
+        }
+      }
+    ]
+}
+

@@ -3,7 +3,7 @@
   "messageType": "CreateCustomerInERP",
   "messageVersion": "1.0",
   "sourceSystem": "CRM",
-  "targetSystem": "BC",
+  "targetSystem": "ERP",
   "correlationId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
   "occurredAt": "2026-06-19T08:30:00Z",
 
@@ -13,18 +13,7 @@
 
   "payload": {
     "customer": {
-      "customerId": "9c858901-8a57-4791-81fe-4c455b099bc9",
-      "name": "Example Customer GmbH",
-      "vatNumber": "ATU12345678",
-        "addresses": [
-        {
-        "addressType": "Invoice",
-        "street": "Musterstraße 1",
-        "postalCode": "6020",
-        "city": "Innsbruck",
-        "countryCode": "AT"
-        }
-        ]
+
     }
   }
 }

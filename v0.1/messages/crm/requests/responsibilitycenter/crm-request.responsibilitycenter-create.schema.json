@@ -1,0 +1,31 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm-request.responsibilitycenter-create.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-18",
+    "x-status": "draft",
+    "title": "Create Responsibility Center in ERP Request",
+    "description": "This is the schema for create responsibility center in ERP request messages sent from CRM to BC.",
+    "allOf": [
+    {
+      "$ref": "../../messageEnvelope.schema.json"
+    },
+    {
+      "required": [
+        "targetSystem",
+        "correlationId",
+        "replyTo"
+      ]
+    },
+    {
+      "properties": {
+        "messageType": {
+          "const": "CreateResponsibilityCenterInERP"
+        },
+        "payload": {
+            "$ref": "../../../model/responsibilitycenter/responsibilitycenter.schema.json"    
+        }
+      }
+    }
+  ]
+}
+
