@@ -16,7 +16,7 @@
       "fileMatch": [
         "**/v0.1/**/customerPriceGroup.example*.json"
       ],
-      "url": "./v0.1/customerPriceGroup/customerPriceGroup.schema.json"
+      "url": "./v0.1/model/customerPriceGroup/customerPriceGroup.schema.json"
     },
     {
       "fileMatch": [
@@ -24,6 +24,12 @@
         "**/v0.1/**/openinghours.example*.json"
       ],
       "url": "./v0.1/model/components/openingHours.schema.json"
+    },   
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm-request.customer-create.example*.json"
+      ],
+      "url": "./v0.1/messages/crm/crm-request.customer-create.schema.json"
     }
   ]
 }
