@@ -1,13 +1,20 @@
 {
-    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm-action.customer-sent-to-erp.schema.json",
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm-request.customer-create.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "x-revision": "2026-06-18",
     "x-status": "draft",
     "title": "Create Customer in ERP Request",
-    "description": "This is the schema for requiring the ERP system to create a customer.",
+    "description": "This is the schema for create customer in ERP request messages sent from CRM to BC.",
     "allOf": [
     {
-      "$ref": "../components/messageEnvelope.schema.json"
+      "$ref": "../../messageEnvelope.schema.json"
+    },
+    {
+      "required": [
+        "targetSystem",
+        "correlationId",
+        "replyTo"
+      ]
     },
     {
       "properties": {
@@ -15,7 +22,11 @@
           "const": "CreateCustomerInERP"
         },
         "payload": {
-          "$ref": "../models/customer.schema.json"
+            "x-designDecision": "ERP-owned attributes are intentionally excluded from create requests since they are managed by the ERP system and not known to the CRM system on creation.",
+            "allOf": [
+                { "$ref": "../../../model/customer/customer.common.schema.json" },
+                { "$ref": "../../../model/customer/customer.crm.schema.json" }
+            ]
         }
       }
     }

@@ -1,0 +1,24 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/erp-request.customer-update.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-18",
+    "x-status": "draft",
+    "title": "Update Customer in CRM Request",
+    "description": "This is the schema for update customer in CRM request messages sent from ERP to CRM.",
+    "allOf": [
+    {
+      "$ref": "../components/messageEnvelope.schema.json"
+    },
+    {
+      "properties": {
+        "messageType": {
+          "const": "UpdateCustomerInCRM"
+        },
+        "payload": {
+          "$ref": "../models/customer.schema.json"
+        }
+      }
+    }
+  ]
+}
+

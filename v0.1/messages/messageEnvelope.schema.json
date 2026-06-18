@@ -48,7 +48,7 @@
     "targetSystem": {
       "type": "string",
       "minLength": 1,
-      "description": "Optional target system. Usually used for commands.",
+      "description": "Optional target system. Usually used for requests.",
       "x-status": "draft"
     },
 

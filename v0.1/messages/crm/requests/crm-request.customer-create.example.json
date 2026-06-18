@@ -1,0 +1,53 @@
+{
+  "messageId": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
+  "messageVersion": "1.0",
+  "messageType": "CreateCustomerInErp",
+  "sourceSystem": "CRM",
+  "createdAt": "2026-06-18T08:30:00Z",
+
+  "payload": {
+    "customer": {
+      "id": "a0d85a2e-65f7-4a7e-bd18-0f8fd0a5b8e5",
+      "erpTenantId": "c31f5db7-26e2-45b4-88c9-5f02d2a34f5d",
+
+      "crmCustomerNumber": "A12345",
+      "erpCustomerNumber": "TEMP-001",
+
+      "name1": "Muster GmbH",
+      "name2": "Filiale Tirol",
+
+      "address1": "Industriestraße 10",
+      "postalCode": "6176",
+      "city": "Völs",
+      "countryCode": "AT",
+
+      "phoneNumber1": "+43512345678",
+      "emailAddress": "office@muster.at",
+
+      "languageTag": "de-AT",
+      "timezone": "Europe/Vienna",
+
+      "roles": [
+        "reseller"
+      ],
+
+      "customerRelations": {
+        "reseller": {
+          "ancestorCustomerId": null
+        }
+      },
+
+      "taxNumbers": {
+        "vatNumber": "ATU12345678"
+      },
+
+      "currency": "EUR",
+      "isPremiumCustomer": false,
+      "salesFunnelStage": "NewCustomer",
+
+      "createdAt": "2026-06-18T08:00:00Z",
+
+      "contentHash": "8d5e957f297893487bd98f3d65fd9a1cb3f48992f72f2d5f8a2cbe5a8fcb7c11"
+    }
+  }
+}
