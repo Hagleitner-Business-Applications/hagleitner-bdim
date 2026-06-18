@@ -14,9 +14,7 @@ requests/responses, on the other hand, are used to communicate an action or task
 
 The action is sent to the application-owned queue **sbq_bc**, where the ERP system picks up the action and creates the customer in its database.
 
-In case of success, the ERP system sends an erp-response.customer-create-successful message to the application-owned queue **sbq_crm**, containing, most importantly, the ERP UUID and ERP Number.
-
-In case of an error, an erp-response.customer-create-failed message is sent to the application-owned queue.
+The ERP systems sends a response to the request to the application-owned queue **sbq_crm** of the CRM system. The application-owned queue or response queue is send within the request of the requesting application, in that case the CRM System. The field is called **replyTo**. In case of an error, the response contains details of the error and additional informations as payload. In case of success, the payload contains most importantly, the ERP UUID and ERP Number.
 
 TODO: Do we need a dedicated error queue?
 
@@ -37,11 +35,12 @@ The action must contain control information that allows CRM to publish a success
 
 ## Datamodel
 This section provides additional information about the CRM data model.
+TODO: insert relevant part of the crm datamodel here
 
 ## Tables and Events
 Every table supports events, and events are produced at different stages of the event pipeline.
 
-A common table relevant for the BDMI is the **Account** table. An Account is an entity containing customer-related information such as correspondence details, postal addresses, delivery addresses, invoice addresses, billing information, and more.
+A common table relevant for the BDMI is the **Account** table. An Account is an entity containing customer-related information such as correspondence details, postal addresses, billing information, and more.
 
 Typical events that should be considered for the BDMI are:
 
