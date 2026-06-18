@@ -16,6 +16,8 @@ The action is sent to the application-owned queue **sbq_bc**, where the ERP syst
 
 The ERP systems sends a response to the request to the application-owned queue **sbq_crm** of the CRM system. The application-owned queue or response queue is send within the request of the requesting application, in that case the CRM System. The field is called **replyTo**. In case of an error, the response contains details of the error and additional informations as payload. In case of success, the payload contains most importantly, the ERP UUID and ERP Number.
 
+A request and the corresponding response shares the same correlationid even that they are in differant queues.
+
 TODO: Do we need a dedicated error queue?
 
 ### Service Bus Topics and Queues
