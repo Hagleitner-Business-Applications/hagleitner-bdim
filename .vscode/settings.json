@@ -29,7 +29,7 @@
       "fileMatch": [
         "**/v0.1/**/crm-request.customer-create.example*.json"
       ],
-      "url": "./v0.1/messages/crm/crm-request.customer-create.schema.json"
+      "url": "./v0.1/messages/crm/requests/crm-request.customer-create.schema.json"
     }
   ]
 }
