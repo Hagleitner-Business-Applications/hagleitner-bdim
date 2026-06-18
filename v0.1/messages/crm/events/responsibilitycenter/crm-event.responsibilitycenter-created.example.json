@@ -1,0 +1,23 @@
+{
+  "messageId": "8f3c7c5e-4c72-4b0e-b8e2-2f6d8d7e3d4a",
+  "messageType": "ResponsibilityCenterCreatedEvent",
+  "sourceSystem": "CRM",
+  "occurredAt": "2026-06-18T14:30:00Z",
+  "payload": {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "code": "AB123",
+    "costCenter": "CC100",
+    "warehouseLocation": "WH1",
+    "name1": "Responsibility Center 1",
+    "name2": "Secondary Name",
+    "phoneNumber": "+1234567890",
+    "address1": "Reichenhallerstraße 12",
+    "address2": null,
+    "postalCode": "5020",
+    "city": "Salzburg",
+    "countryCode": "AT",
+    "emailAddress": "example@example.com",
+    "logisticsManagerId": "123e4567-e89b-12d3-a456-426614174001",
+    "organizationManagerId": "123e4567-e89b-12d3-a456-426614174002"
+  }
+}

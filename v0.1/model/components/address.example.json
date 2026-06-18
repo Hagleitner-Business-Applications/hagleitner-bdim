@@ -1,0 +1,13 @@
+{
+  "address1": "Eduard-Bodem-Gasse 1",
+  "address2": "Building A",
+  "postalCode": "6020",
+  "city": "Innsbruck",
+  "stateOrProvince": "Tirol",
+  "countryCode": "AT",
+  "geoLocation": {
+    "latitude": 47.2692,
+    "longitude": 11.4041,
+    "elevation": 574
+  }
+}
