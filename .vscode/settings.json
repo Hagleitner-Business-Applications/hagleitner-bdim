@@ -24,12 +24,6 @@
         "**/v0.1/**/openinghours.example*.json"
       ],
       "url": "./v0.1/model/components/openingHours.schema.json"
-    },   
-    {
-      "fileMatch": [
-        "**/v0.1/**/crm-request.customer-create.example*.json"
-      ],
-      "url": "./v0.1/messages/crm/requests/crm-request.customer-create.schema.json"
     }
   ]
 }
