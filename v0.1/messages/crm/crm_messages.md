@@ -6,11 +6,11 @@ This document lists all messages of the event pipeline that need to be part of t
 ## Service Bus
 The Service Bus is the place where applications send messages to communicate events and data changes.
 
-We distinguish between two categories: **events** and **actions**.
+We distinguish between two categories: **events** and **requests/responses**.
 
 If an application needs to communicate an event, it uses its application-owned topic on the Service Bus. For example, sbt_crm is the Service Bus topic owned by the CRM application. The CRM application sends events to that topic for interested subscribers.
 
-actions, on the other hand, are used to communicate an action or task to another explicitly addressed application. For example, the action "Create Customer in ERP" is used by CRM (Dynamics 365 CE) to instruct ERP (Dynamics 365 Business Central) to create a customer that already exists in CRM.
+requests/responses, on the other hand, are used to communicate an action or task to another explicitly addressed application. For example, the action "Create Customer in ERP" is used by CRM (Dynamics 365 CE) to instruct ERP (Dynamics 365 Business Central) to create a customer that already exists in CRM.
 
 The action is sent to the application-owned queue **sbq_bc**, where the ERP system picks up the action and creates the customer in its database.
 
@@ -31,7 +31,7 @@ Used to publish events for interested subscribers. This is a fire-and-forget mec
 
 **Queue:** sbq_crm
 
-Used to receive actions for CRM. An application publishing messages to this queue instructs CRM to perform a specific action.
+Used to receive requests/responses for CRM. An application publishing messages to this queue instructs CRM to perform a specific action.
 
 The action must contain control information that allows CRM to publish a success or failure message to the originating application's queue, for example sbq_erp.
 
@@ -65,4 +65,4 @@ Draft:
 
 An Account is changed in CRM, and the change must be communicated to the Service Bus.
 
-We distinguish between two categories: events and actions.
+We distinguish between two categories: events and requests/responses.

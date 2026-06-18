@@ -1,0 +1,24 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm-action.customer-sent-to-erp.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-18",
+    "x-status": "draft",
+    "title": "Create Customer in ERP Request",
+    "description": "This is the schema for requiring the ERP system to create a customer.",
+    "allOf": [
+    {
+      "$ref": "../components/messageEnvelope.schema.json"
+    },
+    {
+      "properties": {
+        "messageType": {
+          "const": "CreateCustomerInERP"
+        },
+        "payload": {
+          "$ref": "../models/customer.schema.json"
+        }
+      }
+    }
+  ]
+}
+
