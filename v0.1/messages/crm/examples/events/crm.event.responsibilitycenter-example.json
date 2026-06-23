@@ -1,6 +1,6 @@
 {
   "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
-  "messageVersion": "1.0",
+  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.event.schema.json",
   "sourceSystem": "CRM",
   "payload": {
     "objectType": "responsibilityCenter",
