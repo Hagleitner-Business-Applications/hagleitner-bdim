@@ -4,7 +4,7 @@
     "x-revision": "2026-06-23",
     "x-status": "draft",
     "title": "ERP Request",
-    "description": "Generic schema for business requests sent by ERP. Properties marked with x-amqp-property document AMQP / Azure Service Bus message properties. They are expected on the transport message and are not part of the JSON body payload.",
+    "description": "Generic schema for business requests sent by ERP.",
     "type": "object",
     "unevaluatedProperties": false,
     "required": [
@@ -23,10 +23,9 @@
         "message-id": {
             "type": "string",
             "format": "uuid",
-            "description": "Logical representation of the AMQP message-id. In Azure Service Bus this should be set on the transport message, for example ServiceBusMessage.MessageId.",
+            "description": "AMQP message-id. In Azure Service Bus this should be set on the transport message, for example ServiceBusMessage.MessageId.",
             "x-layer": "transport",
-            "x-amqp-section": "properties",
-            "x-amqp-property": "message-id"
+            "x-amqp-section": "properties"
         },
         "correlation-id": {
             "type": "string",
@@ -59,10 +58,9 @@
         "to": {
             "type": "string",
             "minLength": 1,
-            "description": "Optional logical representation of the AMQP to property. This may contain the target queue, topic or logical receiver address.",
+            "description": "AMQP to property. This may contain the target queue, topic or logical receiver address.",
             "x-layer": "transport",
-            "x-amqp-section": "properties",
-            "x-amqp-property": "to"
+            "x-amqp-section": "properties"
         },
         "applicationProperties": {
             "type": "object",
