@@ -4,7 +4,7 @@
   "reply-to": "sbq_crm",
   "messageVersion": "1.0",
   "sourceSystem": "CRM",
-  "targetSystem": "BC",
+  "targetSystem": "ERP",
 
   "payload": {
     "objectType": "customer",
