@@ -1,6 +1,6 @@
 {
   "message-id": "5f98d94d-f3d8-4f6a-bd9d-c4d1f5d3f9c1",
-  "messageVersion": "1.0",
+  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.event.schema.json",
   "sourceSystem": "CRM",
   "payload": {
     "objectType": "customer",
