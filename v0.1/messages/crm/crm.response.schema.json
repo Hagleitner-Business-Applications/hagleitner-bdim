@@ -42,10 +42,7 @@
     "sourceSystem": {
       "type": "string",
       "description": "System generating the response.",
-      "enum": [
-        "BC",
-        "CRM"
-      ]
+      "const": "CRM"
     },
 
     "targetSystem": {

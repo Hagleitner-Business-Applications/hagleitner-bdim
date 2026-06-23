@@ -92,10 +92,7 @@
         "targetSystem": {
             "type": "string",
             "description": "Logical target system that should process the request.",
-            "enum": [
-                "BC",
-                "ERP"
-            ]
+            "const": "ERP"
         },
         "objectType": {
             "type": "string",
