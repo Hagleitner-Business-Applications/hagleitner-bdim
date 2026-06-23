@@ -1,10 +1,10 @@
 {
-    "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.schema.json",
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/erp.request.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "x-revision": "2026-06-23",
     "x-status": "draft",
-    "title": "CRM Request",
-    "description": "Generic schema for business requests sent by CRM. Properties marked with x-amqp-property document AMQP / Azure Service Bus message properties. They are expected on the transport message and are not part of the JSON body payload.",
+    "title": "ERP Request",
+    "description": "Generic schema for business requests sent by ERP. Properties marked with x-amqp-property document AMQP / Azure Service Bus message properties. They are expected on the transport message and are not part of the JSON body payload.",
     "type": "object",
     "unevaluatedProperties": false,
     "required": [
@@ -73,7 +73,7 @@
             "properties": {
                 "schemaName": {
                     "type": "string",
-                    "const": "crm.request"
+                    "const": "erp.request"
                 },
                 "schemaVersion": {
                     "type": "string",
@@ -85,7 +85,7 @@
             "type": "string",
             "description": "Logical source system that created the request.",
             "enum": [
-                "CRM"
+                "ERP"
             ]
         },
         "objectType": {
@@ -100,7 +100,7 @@
         },
         "operation": {
             "type": "string",
-            "description": "Business operation requested by CRM.",
+            "description": "Business operation requested by ERP.",
             "enum": [
                 "create",
                 "update",
@@ -127,7 +127,7 @@
                     "const": "create"
                 },
                 "subject": {
-                    "const": "crm.customer.create"
+                    "const": "erp.customer.create"
                 },
                 "payload": {
                     "$ref": "../../model/customer/customer.schema.json"
@@ -144,7 +144,7 @@
                     "const": "update"
                 },
                 "subject": {
-                    "const": "crm.customer.update"
+                    "const": "erp.customer.update"
                 },
                 "payload": {
                     "$ref": "../../model/customer/customer.schema.json"
@@ -161,7 +161,7 @@
                     "const": "delete"
                 },
                 "subject": {
-                    "const": "crm.customer.delete"
+                    "const": "erp.customer.delete"
                 },
                 "payload": {
                     "$ref": "#/$defs/deletePayload"
@@ -178,7 +178,7 @@
                     "const": "create"
                 },
                 "subject": {
-                    "const": "crm.customerPriceGroup.create"
+                    "const": "erp.customerPriceGroup.create"
                 },
                 "payload": {
                     "$ref": "../../model/customerPriceGroup/customerPriceGroup.schema.json"
@@ -195,7 +195,7 @@
                     "const": "update"
                 },
                 "subject": {
-                    "const": "crm.customerPriceGroup.update"
+                    "const": "erp.customerPriceGroup.update"
                 },
                 "payload": {
                     "$ref": "../../model/customerPriceGroup/customerPriceGroup.schema.json"
@@ -212,7 +212,7 @@
                     "const": "delete"
                 },
                 "subject": {
-                    "const": "crm.customerPriceGroup.delete"
+                    "const": "erp.customerPriceGroup.delete"
                 },
                 "payload": {
                     "$ref": "#/$defs/deletePayload"
@@ -229,7 +229,7 @@
                     "const": "create"
                 },
                 "subject": {
-                    "const": "crm.employee.create"
+                    "const": "erp.employee.create"
                 },
                 "payload": {
                     "$ref": "../../model/employee/employee.schema.json"
@@ -246,7 +246,7 @@
                     "const": "update"
                 },
                 "subject": {
-                    "const": "crm.employee.update"
+                    "const": "erp.employee.update"
                 },
                 "payload": {
                     "$ref": "../../model/employee/employee.schema.json"
@@ -263,7 +263,7 @@
                     "const": "delete"
                 },
                 "subject": {
-                    "const": "crm.employee.delete"
+                    "const": "erp.employee.delete"
                 },
                 "payload": {
                     "$ref": "#/$defs/deletePayload"
@@ -280,7 +280,7 @@
                     "const": "create"
                 },
                 "subject": {
-                    "const": "crm.responsibilityCenter.create"
+                    "const": "erp.responsibilityCenter.create"
                 },
                 "payload": {
                     "$ref": "../../model/responsibilityCenter/responsibilitycenter.schema.json"
@@ -297,7 +297,7 @@
                     "const": "update"
                 },
                 "subject": {
-                    "const": "crm.responsibilityCenter.update"
+                    "const": "erp.responsibilityCenter.update"
                 },
                 "payload": {
                     "$ref": "../../model/responsibilityCenter/responsibilitycenter.schema.json"
@@ -314,7 +314,7 @@
                     "const": "delete"
                 },
                 "subject": {
-                    "const": "crm.responsibilityCenter.delete"
+                    "const": "erp.responsibilityCenter.delete"
                 },
                 "payload": {
                     "$ref": "#/$defs/deletePayload"

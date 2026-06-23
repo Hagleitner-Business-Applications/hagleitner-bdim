@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/erp.response.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-23",
   "x-status": "draft",
-  "title": "CRM Response",
-  "description": "Generic schema for responses sent from backend systems to CRM.",
+  "title": "ERP Response",
+  "description": "Generic schema for responses sent from backend systems to ERP.",
   "type": "object",
   "unevaluatedProperties": false,
 
@@ -39,7 +39,7 @@
     "sourceSystem": {
       "type": "string",
       "description": "System generating the response.",
-      "const": "ERP"
+      "const": "CRM"
     },
     "objectType": {
       "type": "string",

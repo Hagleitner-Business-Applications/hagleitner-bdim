@@ -15,6 +15,7 @@
         "jobCode": "SALES",
         "phoneNumber": "+436621234567",
         "mobilePhoneNumber": "+436641234567",
-        "emailAddress": "max.mustermann@hagleitner.com"
+        "emailAddress": "max.mustermann@hagleitner.com",
+        "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
     }
 }

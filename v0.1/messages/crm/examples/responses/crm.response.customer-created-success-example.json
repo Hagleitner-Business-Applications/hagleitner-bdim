@@ -2,7 +2,6 @@
   "message-id": "f4b0b6f8-7f17-47f4-9a0f-98c6f2c4f111",
   "correlation-id": "9d3d6d6a-ec6d-4f0e-8e86-2d6b1b8c1a01",
   "sourceSystem": "ERP",
-  "targetSystem": "CRM",
   "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.response.schema.json",
   "payload": {
     "objectType": "customer",

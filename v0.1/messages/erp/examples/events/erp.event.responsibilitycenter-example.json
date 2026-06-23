@@ -1,7 +1,7 @@
 {
   "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
-  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.event.schema.json",
-  "sourceSystem": "CRM",
+  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/erp.event.schema.json",
+  "sourceSystem": "ERP",
   "payload": {
     "objectType": "responsibilityCenter",
     "operation": "created",
@@ -20,7 +20,6 @@
     "phoneNumber": "+43512555111",
     "emailAddress": "innsbruck@hagleitner.com",
     "logisticsManagerId": "123e4567-e89b-12d3-a456-426614174010",
-    "organizationManagerId": "123e4567-e89b-12d3-a456-426614174011",
-    "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
+    "organizationManagerId": "123e4567-e89b-12d3-a456-426614174011"
   }
 }
