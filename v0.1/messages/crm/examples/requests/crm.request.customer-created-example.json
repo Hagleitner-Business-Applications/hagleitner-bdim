@@ -1,10 +1,15 @@
 {
-  "messageId": "5f98d94d-f3d8-4f6a-bd9d-c4d1f5d3f9c1",
-  "messageType": "CustomerCreatedEvent",
+  "message-id": "9d3d6d6a-ec6d-4f0e-8e86-2d6b1b8c1a01",
+  "correlation-id": "9d3d6d6a-ec6d-4f0e-8e86-2d6b1b8c1a01",
+  "reply-to": "sbq_crm",
+  "messageVersion": "1.0",
   "sourceSystem": "CRM",
-  "occurredAt": "2026-06-18T15:30:00Z",
+  "targetSystem": "BC",
 
   "payload": {
+    "objectType": "customer",
+    "operation": "create",
+
     "id": "f1c4b7c8-2e9a-4d8a-8d9e-1a2b3c4d5e6f",
     "crmCustomerNumber": "A12345",
 
@@ -30,7 +35,7 @@
       }
     },
 
-    "createdAt": "2026-06-18T15:25:00Z",
+    "createdAt": "2026-06-23T08:30:00Z",
 
     "contentHash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
   }
