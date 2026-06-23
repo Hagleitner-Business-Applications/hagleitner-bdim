@@ -1,0 +1,28 @@
+{
+  "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "payload": {
+    "objectType": "customerPriceGroup",
+    "operation": "created",
+    "occurredAt": "2026-06-23T09:20:00Z",
+    "id": "b3a91f7d-9d5e-4e84-b2aa-8e0d7d1f6c21",
+    "code": "CPG001",
+    "description": {
+      "translations": [
+        {
+          "languageTag": "de",
+          "text": "Standard Wiederverkäufer"
+        },
+        {
+          "languageTag": "en-GB",
+          "text": "Standard reseller"
+        }
+      ]
+    },
+    "erpTenantIds": [
+      "123e4567-e89b-12d3-a456-426614174001"
+    ],
+    "activeForPriceBookCustomer": true
+  }
+}

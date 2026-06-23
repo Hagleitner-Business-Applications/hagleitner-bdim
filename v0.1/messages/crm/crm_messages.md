@@ -44,7 +44,7 @@ Every table supports events, and events are produced at different stages of the 
 
 A common table relevant for the BDMI is the **Account** table. An Account is an entity containing customer-related information such as correspondence details, postal addresses, billing information, and more.
 
-Typical events that should be considered for the BDMI are:
+Typical crm events that should be considered for the BDMI are:
 
  [Create](https://learn.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.createrequest?view=dataverse-sdk-latest
  [Update](https://learn.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.updaterequest?view=dataverse-sdk-latest)
@@ -59,6 +59,17 @@ Pre Operation events are executed before data is written.
 Post Operation events are executed after data has been written.
 
 The BDMI should use Post Operation events to ensure that only successfully committed data is communicated.
+
+### CRM Events vs BDMI Events
+CRM Events are not the same as BDMI Events. All CRM Events are mapped to three basic BDMI Events that are: Create, Update, Delete.
+
+CRM Event Create maps to BDMI Event Create
+CRM Event Update maps to BDMI Event Update
+CRM Event Delete maps to BDMI Event Delete
+CRM Event Assign maps to BDMI Event Update
+CRM Event Associate maps to BDMI Event Update
+CRM Event Dissacociate maps to BDMI Event Update
+
 
 ### Account
 
