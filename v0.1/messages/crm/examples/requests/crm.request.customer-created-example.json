@@ -4,8 +4,6 @@
   "reply-to": "sbq_crm",
   "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.request.schema.json",
   "sourceSystem": "CRM",
-  "targetSystem": "ERP",
-
   "payload": {
     "objectType": "customer",
     "operation": "create",
