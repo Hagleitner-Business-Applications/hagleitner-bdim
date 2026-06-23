@@ -24,60 +24,37 @@
             "type": "string",
             "format": "uuid",
             "description": "AMQP message-id. In Azure Service Bus this should be set on the transport message, for example ServiceBusMessage.MessageId.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
+            "x-layer": "transport"
         },
         "correlation-id": {
             "type": "string",
             "format": "uuid",
             "description": "AMQP correlation-id used to correlate request and response messages.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
+            "x-layer": "transport"
         },
         "reply-to": {
             "type": "string",
             "minLength": 1,
             "description": "AMQP reply-to property. For request/response flows this identifies the queue or topic where the response should be sent.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
+            "x-layer": "transport"
         },
         "subject": {
             "type": "string",
             "minLength": 1,
             "description": "AMQP subject property. Recommended value: crm.<objectType>.<operation>.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
+            "x-layer": "transport"
         },
         "content-type": {
             "type": "string",
             "const": "application/json",
             "description": "AMQP content-type property.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
+            "x-layer": "transport"
         },
         "to": {
             "type": "string",
             "minLength": 1,
             "description": "AMQP to property. This may contain the target queue, topic or logical receiver address.",
-            "x-layer": "transport",
-            "x-amqp-section": "properties"
-        },
-        "applicationProperties": {
-            "type": "object",
-            "description": "Logical representation of AMQP application-properties. Use this section for custom transport metadata such as schema name or schema version.",
-            "x-layer": "transport",
-            "x-amqp-section": "application-properties",
-            "unevaluatedProperties": true,
-            "properties": {
-                "schemaName": {
-                    "type": "string",
-                    "const": "erp.request"
-                },
-                "schemaVersion": {
-                    "type": "string",
-                    "pattern": "^\\d+\\.\\d+$"
-                }
-            }
+            "x-layer": "transport"
         },
         "sourceSystem": {
             "type": "string",
