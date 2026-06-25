@@ -24,6 +24,30 @@
         "**/v0.1/**/openinghours.example*.json"
       ],
       "url": "./v0.1/model/components/openingHours.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/exception.*example*.json",
+      ],
+      "url": "./v0.1/messages/common/exception.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/messages/crm/examples/events/crm.event.*example.json",
+      ],
+      "url": "./v0.1/messages/crm/crm.event.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/messages/crm/examples/requests/crm.request.*example.json",
+      ],
+      "url": "./v0.1/messages/crm/crm.request.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/messages/crm/examples/responses/crm.response.*example.json",
+      ],
+      "url": "./v0.1/messages/crm/crm.response.schema.json"
     }
   ]
 }

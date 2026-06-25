@@ -43,7 +43,11 @@
         "geoLocation": {
             "$ref": "baseTypes.schema.json#/$defs/geoLocation",
             "x-status": "approved"
-         }
+         },        
+         "contentHash": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "description": "Hash of the customer content for change detection."
+        }
     },
     "dependentRequired": {
         "address2": [
