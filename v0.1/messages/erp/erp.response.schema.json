@@ -164,7 +164,7 @@
       ],
       "properties": {
         "id": {
-          "$ref": "../../components/baseTypes.schema.json#/$defs/uuid"
+          "$ref": "../../model/components/baseTypes.schema.json#/$defs/uuid"
         }
       }
     }

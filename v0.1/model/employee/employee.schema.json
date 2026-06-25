@@ -72,6 +72,10 @@
             "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
             "description": "Email address of the employee.",
             "x-status": "approved"
-         }
+         },        
+         "contentHash": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "description": "Hash of the customer content for change detection."
+        }
     }
 }

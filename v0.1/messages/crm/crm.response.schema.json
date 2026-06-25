@@ -16,7 +16,6 @@
     "objectType",
     "success"
   ],
-
   "properties": {
     "message-id": {
       "type": "string",
@@ -154,7 +153,6 @@
       }
     }
   ],
-
   "$defs": {
     "idPayload": {
       "type": "object",
@@ -164,7 +162,7 @@
       ],
       "properties": {
         "id": {
-          "$ref": "../../components/baseTypes.schema.json#/$defs/uuid"
+          "$ref": "../../model/components/basetypes.schema.json#/$defs/uuid"
         }
       }
     }

@@ -1,26 +1,23 @@
 {
   "message-id": "9d3d6d6a-ec6d-4f0e-8e86-2d6b1b8c1a01",
+  "messageVersion": "1.0",
   "correlation-id": "9d3d6d6a-ec6d-4f0e-8e86-2d6b1b8c1a01",
+  "content-type": "application/json",
+  "requestedAt": "2026-06-23T08:30:00Z",
   "reply-to": "sbq_crm",
-  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/crm.request.schema.json",
   "sourceSystem": "CRM",
+  "objectType": "customer",
+  "operation": "create",
   "payload": {
-    "objectType": "customer",
-    "operation": "create",
-
     "id": "f1c4b7c8-2e9a-4d8a-8d9e-1a2b3c4d5e6f",
     "crmCustomerNumber": "A12345",
-
     "name1": "Muster Hotel GmbH",
-
     "address1": "Hotelstraße 1",
     "postalCode": "6020",
     "city": "Innsbruck",
     "countryCode": "AT",
-
     "phoneNumber1": "+43512555123",
     "emailAddress": "office@musterhotel.at",
-
     "languageTag": "de-AT",
 
     "roles": [
@@ -34,7 +31,6 @@
     },
 
     "createdAt": "2026-06-23T08:30:00Z",
-
     "contentHash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
   }
 }

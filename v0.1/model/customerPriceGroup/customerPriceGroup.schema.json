@@ -41,6 +41,10 @@
             "description": "Indicates whether the customer price group is active for price book customers.",
             "x-status": "approved",
             "default": false
+        },
+        "contentHash": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "description": "Hash of the customer content for change detection."
         }
     }
 }
