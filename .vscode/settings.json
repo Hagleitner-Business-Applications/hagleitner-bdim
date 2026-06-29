@@ -107,7 +107,29 @@
         "**/v0.1/**/crm.request.responsibilitycenter.update.*example.json"
       ],
       "url": "./v0.1/messages/crm/requests/responsibilitycenter/crm.request.responsibilitycenter.update.schema.json"
+    },
+
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customer.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customer/crm.request.customer.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customer.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customer/crm.request.customer.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customer.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customer/crm.request.customer.update.schema.json"
     }
+
 
 
 
