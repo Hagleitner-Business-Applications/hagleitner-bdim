@@ -2,6 +2,7 @@
   "messageVersion": "1.0",
   "sourceSystem": "ERP",
   "objectType": "responsibilityCenter",
+  "operation": "create",
   "success": false,
   "exception": {
     "error": {
