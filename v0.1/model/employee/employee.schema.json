@@ -72,7 +72,13 @@
             "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
             "description": "Email address of the employee.",
             "x-status": "approved"
-         },        
+         },      
+         "customerPriceGroup": {
+            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "maxLength": 10,
+            "description": "The code of the customer price group associated with the employee.",
+            "x-status": "approved"
+         },
          "contentHash": {
             "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
             "description": "Hash of the customer content for change detection."

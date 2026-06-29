@@ -17,6 +17,12 @@
         "**/v0.1/**/customerPriceGroup.example*.json"
       ],
       "url": "./v0.1/model/customerPriceGroup/customerPriceGroup.schema.json"
+    },    
+    {
+      "fileMatch": [
+        "**/v0.1/**/employee.example*.json"
+      ],
+      "url": "./v0.1/model/employee/employee.schema.json"
     },
     {
       "fileMatch": [

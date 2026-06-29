@@ -8,5 +8,6 @@
   "jobCode": "58",
   "phoneNumber": "+436641234567",
   "mobilePhoneNumber": "+4369912345678",
-  "emailAddress": "anna.muster@hagleitner.com"
+  "emailAddress": "anna.muster@hagleitner.com",
+  "customerPriceGroup": "GVP"
 }
