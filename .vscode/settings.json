@@ -24,14 +24,14 @@
         "**/v0.1/**/openinghours.example*.json"
       ],
       "url": "./v0.1/model/components/openingHours.schema.json"
-<<<<<<< HEAD
+
     },   
     {
       "fileMatch": [
         "**/v0.1/**/crm-request.customer-create.example*.json"
       ],
       "url": "./v0.1/messages/crm/crm-request.customer-create.schema.json"
-=======
+
     },
     {
       "fileMatch": [
@@ -59,18 +59,10 @@
       "fileMatch": [
         "**/v0.1/**/messages/crm/examples/events/responsibilitycenter/crm.event.responsibilitycenter.deleted.example.json",
       ],
-<<<<<<< HEAD
+
       "url": "./v0.1/messages/crm/crm.response.schema.json"
->>>>>>> 30d99dc (massive refactoring after validating the example files against the schemas)
-    }
-=======
-      "url": "./v0.1/messages/crm/events/responsibilitycenter/crm.event.responsibilitycenter.deleted.schema.json"
+
     },
-
-
-
-
-
     {
       "fileMatch": [
         "**/v0.1/**/messages/crm/examples/events/customer/crm.event.customer.created.*example.json",
