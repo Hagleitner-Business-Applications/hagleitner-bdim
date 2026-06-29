@@ -9,7 +9,8 @@
         "employeeNumber",
         "firstName",
         "lastName",
-        "statusCode"
+        "statusCode",
+        "customerPriceGroup"
     ],
     "properties": {
         "id": {
