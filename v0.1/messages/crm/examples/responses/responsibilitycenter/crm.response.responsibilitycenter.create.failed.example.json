@@ -1,0 +1,29 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "responsibilityCenter",
+  "success": false,
+  "exception": {
+    "error": {
+      "code": "validation.failed",
+      "message": "The responsibility center could not be created because required data is missing.",
+      "target": "responsibilityCenter",
+      "details": [
+        {
+          "code": "field.required",
+          "message": "VAT number is required.",
+          "target": "taxNumbers.vatNumber"
+        },
+        {
+          "code": "field.required",
+          "message": "Payment terms must be specified.",
+          "target": "billingAndPayment.paymentTermsId"
+        }
+      ],
+      "innerError": {
+        "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+        "timestamp": "2026-06-23T09:15:42Z"
+      }
+    }
+  }
+}

@@ -41,8 +41,7 @@
       "enum": [
         "customer",
         "customerPriceGroup",
-        "employee",
-        "responsibilityCenter"
+        "employee"
       ],
       "x-layer": "business"
     },

@@ -1,8 +1,7 @@
 {
-  "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
   "messageVersion": "1.0",
   "sourceSystem": "CRM",
-  "objectType": "responsibilityCenter",
+  "objectType": "employee",
   "operation": "created",
   "occurredAt": "2026-06-23T09:25:00Z",
   "payload": {
@@ -10,7 +9,7 @@
     "code": "INNSBRUCK",
     "costCenter": "CC100",
     "warehouseLocation": "WH01",
-    "name1": "Responsibility Center Innsbruck",
+    "name1": "Employee Innsbruck",
     "name2": null,
     "address1": "Valiergasse 58",
     "address2": null,

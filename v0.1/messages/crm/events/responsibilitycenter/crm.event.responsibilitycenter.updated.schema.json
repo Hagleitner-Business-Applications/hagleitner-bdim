@@ -1,0 +1,53 @@
+{
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.event.responsibilitycenter.updated.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-06-22",
+  "x-status": "draft",
+  "title": "CRM Event responsibilitycenter updated",
+  "description": "Schema for responsibility center updated events in CRM.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "messageVersion",
+    "sourceSystem",
+    "objectType",
+    "operation",
+    "occurredAt",
+    "payload"
+  ],
+  "properties": {
+        "messageVersion": {
+        "type": "string",
+        "pattern": "^\\d+\\.\\d+$",
+        "description": "Message contract version.",
+        "x-layer": "business",
+        "x-status": "draft"
+        },
+        "sourceSystem": {
+        "type": "string",
+        "description": "Source system that generated the event.",
+        "const": "CRM"
+        },
+        "objectType": {
+        "type": "string",
+        "description": "Type of business object affected by the event.",
+        "const": "responsibilityCenter"
+        },
+        "operation": {
+        "type": "string",
+        "description": "Business operation that occurred in CRM.",
+        "const": "updated"
+        },
+        "occurredAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Timestamp when the business event occurred in the source system."
+        },
+        "payload": {
+            "description": "Event payload. Contains the data of the updated responsibility center.",
+            "allOf": [
+            { "$ref": "../../../../model/responsibilitycenter/responsibilitycenter.schema.json" }
+            ]
+        }
+    }
+}

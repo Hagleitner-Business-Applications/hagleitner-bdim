@@ -1,13 +1,13 @@
 {
-  "message-id": "5f98d94d-f3d8-4f6a-bd9d-c4d1f5d3f9c1",
   "messageVersion": "1.0",
   "sourceSystem": "CRM",
   "objectType": "customer",
-  "operation": "created",
-  "occurredAt": "2026-06-23T08:30:00Z",
+  "operation": "updated",
+  "occurredAt": "2026-06-23T09:25:00Z",
   "payload": {
     "id": "f1c4b7c8-2e9a-4d8a-8d9e-1a2b3c4d5e6f",
     "crmCustomerNumber": "A12345",
+    "erpCustomerNumber": "15988712",
     "name1": "Muster Hotel GmbH",
     "address1": "Hotelstraße 1",
     "postalCode": "6020",
