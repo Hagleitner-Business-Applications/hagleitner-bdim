@@ -1,0 +1,25 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "objectType": "employee",
+  "operation": "created",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+    "id": "c4f9f6d1-8c9f-4c6a-b8c7-7d8e9f0a1b23",
+    "code": "INNSBRUCK",
+    "costCenter": "CC100",
+    "warehouseLocation": "WH01",
+    "name1": "Employee Innsbruck",
+    "name2": null,
+    "address1": "Valiergasse 58",
+    "address2": null,
+    "postalCode": "6020",
+    "city": "Innsbruck",
+    "countryCode": "AT",
+    "phoneNumber": "+43512555111",
+    "emailAddress": "innsbruck@hagleitner.com",
+    "logisticsManagerId": "123e4567-e89b-12d3-a456-426614174010",
+    "organizationManagerId": "123e4567-e89b-12d3-a456-426614174011",
+    "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
+  }
+}

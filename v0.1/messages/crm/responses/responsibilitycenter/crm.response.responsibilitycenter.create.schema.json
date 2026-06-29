@@ -1,0 +1,101 @@
+{
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.responsibilitycenter.create.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-06-22",
+  "x-status": "draft",
+  "title": "CRM Request responsibilitycenter create",
+  "description": "Schema for responsibility center create requests in CRM.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "messageVersion",
+    "sourceSystem",
+    "objectType",
+    "operation",
+    "success"
+  ],
+  "properties": {
+        "messageVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Message contract version.",
+          "x-layer": "business",
+          "x-status": "draft"
+        },
+        "sourceSystem": {
+          "type": "string",
+          "description": "Source system that generated the event.",
+          "x-discussion": "Should it be 'CRM' or 'ERP'? The source system is the system that sends the message. In this case, it is the ERP system that sends a response to a request from CRM.",
+          "const": "ERP"
+        },
+        "objectType": {
+          "type": "string",
+          "description": "Type of business object affected by the event.",
+          "const": "responsibilityCenter"
+        },
+        "operation": {
+          "type": "string",
+          "description": "Business operation that occurred in CRM.",
+          "const": "create"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "Indicates whether the request was processed successfully."
+        },
+        "payload": {
+          "description": "Business payload returned on success."
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
+        }    
+    },   
+  "oneOf": [
+    {
+      "title": "Responsibility center create success response",
+      "properties": {
+        "success": {
+          "const": true
+        },
+        "objectType": {
+          "const": "responsibilityCenter"
+        },
+        "payload": {
+          "$ref": "#/$defs/idPayload"
+        }
+      },
+      "required": [
+        "payload"
+      ]
+    },
+    {
+      "title": "Error response",
+      "properties": {
+        "success": {
+          "const": false
+        }
+      },
+      "required": [
+        "exception"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
+    "$defs": {
+    "idPayload": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "../../../../model/components/basetypes.schema.json#/$defs/uuid"
+        }
+      }
+    }
+  }
+}

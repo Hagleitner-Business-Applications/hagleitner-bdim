@@ -1,0 +1,21 @@
+{
+    "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
+    "messageVersion": "1.0",
+    "sourceSystem": "CRM",
+    "objectType": "employee",
+    "operation": "created",
+    "occurredAt": "2026-06-23T09:15:00Z",
+    "payload": {
+        "id": "f7c0d6c1-2f5a-4b1e-9a12-5d6f7a8b9c01",
+        "employeeNumber": "EMP1001",
+        "statusCode": "active",
+        "salesPersonCode": "SP01",
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "jobCode": "SALES",
+        "phoneNumber": "+436621234567",
+        "mobilePhoneNumber": "+436641234567",
+        "emailAddress": "max.mustermann@hagleitner.com",
+        "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
+    }
+}

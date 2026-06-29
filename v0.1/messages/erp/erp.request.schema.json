@@ -1,0 +1,316 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/erp.request.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-23",
+    "x-status": "draft",
+    "title": "ERP Request",
+    "description": "Generic schema for business requests sent by ERP.",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "message-id",
+        "correlation-id",
+        "reply-to",
+        "subject",
+        "content-type",
+        "sourceSystem",
+        "objectType",
+        "operation",
+        "requestedAt",
+        "payload"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "AMQP message-id. In Azure Service Bus this should be set on the transport message, for example ServiceBusMessage.MessageId.",
+            "x-layer": "transport"
+        },
+        "correlation-id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "AMQP correlation-id used to correlate request and response messages.",
+            "x-layer": "transport"
+        },
+        "reply-to": {
+            "type": "string",
+            "minLength": 1,
+            "description": "AMQP reply-to property. For request/response flows this identifies the queue or topic where the response should be sent.",
+            "x-layer": "transport"
+        },
+        "subject": {
+            "type": "string",
+            "minLength": 1,
+            "description": "AMQP subject property. Recommended value: crm.<objectType>.<operation>.",
+            "x-layer": "transport"
+        },
+        "content-type": {
+            "type": "string",
+            "const": "application/json",
+            "description": "AMQP content-type property.",
+            "x-layer": "transport"
+        },
+        "to": {
+            "type": "string",
+            "minLength": 1,
+            "description": "AMQP to property. This may contain the target queue, topic or logical receiver address.",
+            "x-layer": "transport"
+        },
+        "sourceSystem": {
+            "type": "string",
+            "description": "Logical source system that created the request.",
+            "enum": [
+                "ERP"
+            ]
+        },
+        "objectType": {
+            "type": "string",
+            "description": "Type of business object affected by the request.",
+            "enum": [
+                "customer",
+                "customerPriceGroup",
+                "employee",
+                "responsibilityCenter"
+            ]
+        },
+        "operation": {
+            "type": "string",
+            "description": "Business operation requested by ERP.",
+            "enum": [
+                "create",
+                "update",
+                "delete"
+            ]
+        },
+        "requestedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the business request was created in the source system. This is business metadata and intentionally part of the JSON body."
+        },
+        "payload": {
+            "description": "Request payload. The concrete schema is selected by objectType and operation."
+        }
+    },
+    "oneOf": [
+        {
+            "title": "Customer create request",
+            "properties": {
+                "objectType": {
+                    "const": "customer"
+                },
+                "operation": {
+                    "const": "create"
+                },
+                "subject": {
+                    "const": "erp.customer.create"
+                },
+                "payload": {
+                    "$ref": "../../model/customer/customer.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Customer update request",
+            "properties": {
+                "objectType": {
+                    "const": "customer"
+                },
+                "operation": {
+                    "const": "update"
+                },
+                "subject": {
+                    "const": "erp.customer.update"
+                },
+                "payload": {
+                    "$ref": "../../model/customer/customer.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Customer delete request",
+            "properties": {
+                "objectType": {
+                    "const": "customer"
+                },
+                "operation": {
+                    "const": "delete"
+                },
+                "subject": {
+                    "const": "erp.customer.delete"
+                },
+                "payload": {
+                    "$ref": "#/$defs/deletePayload"
+                }
+            }
+        },
+        {
+            "title": "Customer price group create request",
+            "properties": {
+                "objectType": {
+                    "const": "customerPriceGroup"
+                },
+                "operation": {
+                    "const": "create"
+                },
+                "subject": {
+                    "const": "erp.customerPriceGroup.create"
+                },
+                "payload": {
+                    "$ref": "../../model/customerPriceGroup/customerPriceGroup.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Customer price group update request",
+            "properties": {
+                "objectType": {
+                    "const": "customerPriceGroup"
+                },
+                "operation": {
+                    "const": "update"
+                },
+                "subject": {
+                    "const": "erp.customerPriceGroup.update"
+                },
+                "payload": {
+                    "$ref": "../../model/customerPriceGroup/customerPriceGroup.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Customer price group delete request",
+            "properties": {
+                "objectType": {
+                    "const": "customerPriceGroup"
+                },
+                "operation": {
+                    "const": "delete"
+                },
+                "subject": {
+                    "const": "erp.customerPriceGroup.delete"
+                },
+                "payload": {
+                    "$ref": "#/$defs/deletePayload"
+                }
+            }
+        },
+        {
+            "title": "Employee create request",
+            "properties": {
+                "objectType": {
+                    "const": "employee"
+                },
+                "operation": {
+                    "const": "create"
+                },
+                "subject": {
+                    "const": "erp.employee.create"
+                },
+                "payload": {
+                    "$ref": "../../model/employee/employee.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Employee update request",
+            "properties": {
+                "objectType": {
+                    "const": "employee"
+                },
+                "operation": {
+                    "const": "update"
+                },
+                "subject": {
+                    "const": "erp.employee.update"
+                },
+                "payload": {
+                    "$ref": "../../model/employee/employee.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Employee delete request",
+            "properties": {
+                "objectType": {
+                    "const": "employee"
+                },
+                "operation": {
+                    "const": "delete"
+                },
+                "subject": {
+                    "const": "erp.employee.delete"
+                },
+                "payload": {
+                    "$ref": "#/$defs/deletePayload"
+                }
+            }
+        },
+        {
+            "title": "Responsibility center create request",
+            "properties": {
+                "objectType": {
+                    "const": "responsibilityCenter"
+                },
+                "operation": {
+                    "const": "create"
+                },
+                "subject": {
+                    "const": "erp.responsibilityCenter.create"
+                },
+                "payload": {
+                    "$ref": "../../model/responsibilityCenter/responsibilitycenter.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Responsibility center update request",
+            "properties": {
+                "objectType": {
+                    "const": "responsibilityCenter"
+                },
+                "operation": {
+                    "const": "update"
+                },
+                "subject": {
+                    "const": "erp.responsibilityCenter.update"
+                },
+                "payload": {
+                    "$ref": "../../model/responsibilityCenter/responsibilitycenter.schema.json"
+                }
+            }
+        },
+        {
+            "title": "Responsibility center delete request",
+            "properties": {
+                "objectType": {
+                    "const": "responsibilityCenter"
+                },
+                "operation": {
+                    "const": "delete"
+                },
+                "subject": {
+                    "const": "erp.responsibilityCenter.delete"
+                },
+                "payload": {
+                    "$ref": "#/$defs/deletePayload"
+                }
+            }
+        }
+    ],
+    "$defs": {
+        "deletePayload": {
+            "type": "object",
+            "description": "Minimal payload for delete requests.",
+            "unevaluatedProperties": false,
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "../../model/components/baseTypes.schema.json#/$defs/uuid",
+                    "description": "UUID of the business object to delete."
+                }
+            }
+        }
+    }
+}

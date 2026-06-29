@@ -1,0 +1,31 @@
+{
+  "messageId": "5c9e5f8f-7f8c-4f0d-a9d1-4f8e2c9a1234",
+  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/erp.response.schema.json",
+  "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+  "sourceSystem": "CRM",
+  "objectType": "responsibilityCenter",
+  "success": false,
+  "exception": {
+    "error": {
+      "code": "validation.failed",
+      "message": "The responsibility center could not be created because required data is missing.",
+      "target": "responsibilityCenter",
+      "details": [
+        {
+          "code": "field.required",
+          "message": "code is required.",
+          "target": "responsibilityCenter.code"
+        },
+        {
+          "code": "field.required",
+          "message": "name1 must be specified.",
+          "target": "responsibilityCenter.name1"
+        }
+      ],
+      "innerError": {
+        "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+        "timestamp": "2026-06-23T09:15:42Z"
+      }
+    }
+  }
+}

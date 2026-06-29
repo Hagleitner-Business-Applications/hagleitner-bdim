@@ -1,0 +1,31 @@
+{
+  "message-id": "5c9e5f8f-7f8c-4f0d-a9d1-4f8e2c9a1234",
+  "messageVersion": "1.0",
+  "correlation-id": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+  "sourceSystem": "ERP",
+  "objectType": "customer",
+  "success": false,
+  "exception": {
+    "error": {
+      "code": "validation.failed",
+      "message": "The customer could not be created because required data is missing.",
+      "target": "customer",
+      "details": [
+        {
+          "code": "field.required",
+          "message": "VAT number is required.",
+          "target": "taxNumbers.vatNumber"
+        },
+        {
+          "code": "field.required",
+          "message": "Payment terms must be specified.",
+          "target": "billingAndPayment.paymentTermsId"
+        }
+      ],
+      "innerError": {
+        "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+        "timestamp": "2026-06-23T09:15:42Z"
+      }
+    }
+  }
+}

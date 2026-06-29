@@ -23,13 +23,7 @@
         "**/v0.1/**/openingHours.example*.json",
         "**/v0.1/**/openinghours.example*.json"
       ],
-      "url": "./v0.1/model/components/openingHours.schema.json"
-    },    
-    {
-      "fileMatch": [
-        "**/v0.1/**/employee.example*.json"
-      ],
-      "url": "./v0.1/model/employee/employee.schema.json"
-    },
+      "url": "./v0.1/components/openingHours.schema.json"
+    }
   ]
 }

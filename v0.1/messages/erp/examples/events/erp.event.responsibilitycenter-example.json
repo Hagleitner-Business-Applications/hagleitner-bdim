@@ -1,0 +1,25 @@
+{
+  "message-id": "9a5f4d90-4f70-4d51-9d3f-2d7eab5d1f81",
+  "schemaRef": "https://schema.hagleitner.com/bdim/v0.1/erp.event.schema.json",
+  "sourceSystem": "ERP",
+  "payload": {
+    "objectType": "responsibilityCenter",
+    "operation": "created",
+    "occurredAt": "2026-06-23T09:25:00Z",
+    "id": "c4f9f6d1-8c9f-4c6a-b8c7-7d8e9f0a1b23",
+    "code": "INNSBRUCK",
+    "costCenter": "CC100",
+    "warehouseLocation": "WH01",
+    "name1": "Responsibility Center Innsbruck",
+    "name2": null,
+    "address1": "Valiergasse 58",
+    "address2": null,
+    "postalCode": "6020",
+    "city": "Innsbruck",
+    "countryCode": "AT",
+    "phoneNumber": "+43512555111",
+    "emailAddress": "innsbruck@hagleitner.com",
+    "logisticsManagerId": "123e4567-e89b-12d3-a456-426614174010",
+    "organizationManagerId": "123e4567-e89b-12d3-a456-426614174011"
+  }
+}
