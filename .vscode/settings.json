@@ -30,6 +30,110 @@
         "**/v0.1/**/openinghours.example*.json"
       ],
       "url": "./v0.1/components/openingHours.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customer.created.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customer/crm.event.customer.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customer.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customer/crm.event.customer.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customer.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customer/crm.event.customer.updated.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.employee.created.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/employee/crm.event.employee.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.employee.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/employee/crm.event.employee.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.employee.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/employee/crm.event.employee.updated.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.responsibilitycenter.created.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/responsibilitycenter/crm.event.responsibilitycenter.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.responsibilitycenter.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/responsibilitycenter/crm.event.responsibilitycenter.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.responsibilitycenter.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/responsibilitycenter/crm.event.responsibilitycenter.updated.schema.json"
+    },
+
+
+
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.responsibilitycenter.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/responsibilitycenter/crm.request.responsibilitycenter.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.responsibilitycenter.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/responsibilitycenter/crm.request.responsibilitycenter.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.responsibilitycenter.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/responsibilitycenter/crm.request.responsibilitycenter.update.schema.json"
     }
+
+
+
+
+
+,
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.responsibilitycenter.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/responsibilitycenter/crm.response.responsibilitycenter.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.responsibilitycenter.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/responsibilitycenter/crm.response.responsibilitycenter.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.responsibilitycenter.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/responsibilitycenter/crm.response.responsibilitycenter.update.schema.json"
+    }
+
+
+
   ]
 }
