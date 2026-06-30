@@ -20,6 +20,11 @@ A request and the corresponding response shares the same correlationid even that
 
 TODO: Do we need a dedicated error queue?
 
+
+### AMQP Properties
+
+TODO
+
 ### Service Bus Topics and Queues
 This section describes how an application participates in the BDMI.
 

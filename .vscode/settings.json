@@ -89,6 +89,29 @@
 
 
 
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customerPriceGroup.created.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customerPriceGroup/crm.event.customerPriceGroup.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customerPriceGroup.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customerPriceGroup/crm.event.customerPriceGroup.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.event.customerPriceGroup.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/events/customerPriceGroup/crm.event.customerPriceGroup.updated.schema.json"
+    },
+
+
+
+
+
 
     {
       "fileMatch": [
@@ -129,13 +152,62 @@
       ],
       "url": "./v0.1/messages/crm/requests/customer/crm.request.customer.update.schema.json"
     }
-
-
-
-
-
-
 ,
+
+
+
+
+
+
+
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.employee.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/employee/crm.request.employee.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.employee.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/employee/crm.request.employee.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.employee.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/employee/crm.request.employee.update.schema.json"
+    }
+,
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customerPriceGroup.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customerPriceGroup/crm.request.customerPriceGroup.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customerPriceGroup.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customerPriceGroup/crm.request.customerPriceGroup.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.request.customerPriceGroup.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/requests/customerPriceGroup/crm.request.customerPriceGroup.update.schema.json"
+    }
+,
+
+
+
+
+
+
     {
       "fileMatch": [
         "**/v0.1/**/crm.response.responsibilitycenter.create.*example.json"
@@ -153,8 +225,27 @@
         "**/v0.1/**/crm.response.responsibilitycenter.update.*example.json"
       ],
       "url": "./v0.1/messages/crm/responses/responsibilitycenter/crm.response.responsibilitycenter.update.schema.json"
-    }
+    },
 
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customer.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customer/crm.response.customer.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customer.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customer/crm.response.customer.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customer.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customer/crm.response.customer.update.schema.json"
+    }
 
 
   ]

@@ -1,0 +1,20 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "objectType": "employee",
+  "operation": "update",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+  "id": "8d0a6e4c-5f41-4f7b-a8d2-5f8f0d9d3c11",
+  "employeeNumber": "2123123",
+  "statusCode": "active",
+  "salesPersonCode": "2148",
+  "firstName": "Anna",
+  "lastName": "Muster",
+  "jobCode": "58",
+  "phoneNumber": "+436641234567",
+  "mobilePhoneNumber": "+4369912345678",
+  "emailAddress": "anna.muster@hagleitner.com",
+  "customerPriceGroup": "GVP"
+  }
+}
