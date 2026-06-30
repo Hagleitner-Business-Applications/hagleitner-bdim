@@ -246,7 +246,27 @@
       ],
       "url": "./v0.1/messages/crm/responses/customer/crm.response.customer.update.schema.json"
     }
+,
 
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customerPriceGroup.create.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customerPriceGroup/crm.response.customerPriceGroup.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customerPriceGroup.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customerPriceGroup/crm.response.customerPriceGroup.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/crm.response.customerPriceGroup.update.*example.json"
+      ],
+      "url": "./v0.1/messages/crm/responses/customerPriceGroup/crm.response.customerPriceGroup.update.schema.json"
+    }
 
   ]
 }

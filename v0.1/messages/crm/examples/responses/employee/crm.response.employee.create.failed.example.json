@@ -1,14 +1,14 @@
 {
   "messageVersion": "1.0",
   "sourceSystem": "ERP",
-  "objectType": "responsibilityCenter",
+  "objectType": "employee",
   "operation": "create",
   "success": false,
   "exception": {
     "error": {
       "code": "validation.failed",
-      "message": "The responsibility center could not be created because required data is missing.",
-      "target": "responsibilityCenter",
+      "message": "The employee could not be created because required data is missing.",
+      "target": "employee",
       "details": [
         {
           "code": "field.required",

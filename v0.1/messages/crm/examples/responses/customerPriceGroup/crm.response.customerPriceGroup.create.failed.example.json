@@ -1,24 +1,24 @@
 {
   "messageVersion": "1.0",
   "sourceSystem": "ERP",
-  "objectType": "responsibilityCenter",
+  "objectType": "customerPriceGroup",
   "operation": "create",
   "success": false,
   "exception": {
     "error": {
       "code": "validation.failed",
-      "message": "The responsibility center could not be created because required data is missing.",
-      "target": "responsibilityCenter",
+      "message": "The customerPriceGroup could not be created because required data is missing.",
+      "target": "customerPriceGroup",
       "details": [
         {
           "code": "field.required",
-          "message": "Cost center is required.",
-          "target": "costCenter"
+          "message": "erpTenantIds is required.",
+          "target": "erpTenantIds"
         },
         {
           "code": "field.required",
-          "message": "code is required.",
-          "target": "code"
+          "message": "languageTag is required.",
+          "target": "description.translations[0].languageTag"
         }
       ],
       "innerError": {
