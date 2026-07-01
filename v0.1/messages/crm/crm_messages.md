@@ -112,24 +112,33 @@ Draft/ TODO:
 Draft/ TODO:
 
 
-## Examples
+# Examples
 
-A customer is created in CRM
-    CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.created.schema.json))
+## Events
 
-A customer is changed in CRM
-    CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.updated.schema.json))
+### A customer is created in CRM
 
-A customer is deleted in CRM
-    CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.deleted.schema.json))
+- CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.created.schema.json))
 
-Events are in past tense: created, updated, deleted
+### A customer is updated in CRM
 
-A customer has to be synced from CRM to ERP
-    CRM sends a message to the queue **sbq_erp** ([Schema](./requests/customer/crm.request.customer.create.schema.json))
+- CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.updated.schema.json))
 
-    ERP reads from **sbq_erp** and tries to process the request.
-    ERP sends the response as message to queue **sbq_crm** ([Schema](./responses/customer/crm.response.customer.create.schema.json))
-    The response contains either the ERP payload (ERP Customer Number) or an error message
+### A customer is deleted in CRM
 
+- CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.deleted.schema.json))
 
+> Event operations use the past tense: **created**, **updated**, **deleted**.
+
+---
+
+## Requests / Responses
+
+### A customer has to be synchronized from CRM to ERP
+
+1. CRM sends a request message to the queue **sbq_erp** ([Schema](./requests/customer/crm.request.customer.create.schema.json)).
+2. ERP reads the message from **sbq_erp** and processes the request.
+3. ERP sends the response message to the queue **sbq_crm** ([Schema](./responses/customer/crm.response.customer.create.schema.json)).
+4. The response contains either:
+   - the ERP payload (for example, the ERP customer number), or
+   - an error message.
