@@ -43,7 +43,8 @@
           "description": "Indicates whether the request was processed successfully."
         },
         "payload": {
-          "description": "Business payload returned on success."
+          "description": "Business payload returned on success.",
+          "$ref": "../../../../model/customer/customer.erp.schema.json"
         },
         "exception": {
           "$ref": "../../../common/exception.schema.json"
@@ -60,12 +61,25 @@
           "const": "customer"
         },
         "payload": {
-          "$ref": "#/$defs/idPayload"
+          "description": "Request payload. Contains the data erp customer number returned by the ERP system.",
+          "anyOf": [
+            {    
+              "$ref": "#/$defs/idPayload"
+            },
+            {
+              "$ref": "../../../../model/customer/customer.erp.schema.json"
+            }
+          ]
         }
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",
