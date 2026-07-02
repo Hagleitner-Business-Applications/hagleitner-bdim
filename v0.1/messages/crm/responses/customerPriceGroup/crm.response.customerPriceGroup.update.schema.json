@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.customerPriceGroup.update.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.customerPriceGroup.update.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request customerPriceGroup update",
-  "description": "Schema for customerPriceGroup update requests in CRM.",
+  "title": "CRM Response customerPriceGroup update",
+  "description": "Schema for customerPriceGroup update responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [

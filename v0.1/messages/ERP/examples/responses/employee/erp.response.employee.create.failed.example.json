@@ -1,0 +1,30 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "objectType": "employee",
+  "operation": "create",
+  "success": false,
+  "exception": {
+    "error": {
+      "code": "validation.failed",
+      "message": "The employee could not be created because required data is missing.",
+      "target": "employee",
+      "details": [
+        {
+          "code": "field.required",
+          "message": "Cost center is required.",
+          "target": "costCenter"
+        },
+        {
+          "code": "field.required",
+          "message": "code is required.",
+          "target": "code"
+        }
+      ],
+      "innerError": {
+        "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+        "timestamp": "2026-06-23T09:15:42Z"
+      }
+    }
+  }
+}

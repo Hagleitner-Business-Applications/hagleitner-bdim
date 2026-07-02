@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "customer",
+  "operation": "delete",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+    "id": "c4f9f6d1-8c9f-4c6a-b8c7-7d8e9f0a1b23"
+  }
+}

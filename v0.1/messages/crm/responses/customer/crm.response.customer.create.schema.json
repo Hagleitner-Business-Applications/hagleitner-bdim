@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.customer.create.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.customer.create.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request customer create",
-  "description": "Schema for customer create requests in CRM.",
+  "title": "CRM Response customer create",
+  "description": "Schema for customer create responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [

@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.customer.update.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.customer.update.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request customer update",
-  "description": "Schema for customer update requests in CRM.",
+  "title": "CRM Response customer update",
+  "description": "Schema for customer update responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [

@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "objectType": "customerPriceGroup",
+  "operation": "create",
+  "success": true,
+  "payload": {
+    "id": "f1c4b7c8-2e9a-4d8a-8d9e-1a2b3c4d5e6f"
+  }
+}

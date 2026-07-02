@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.employee.delete.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.employee.delete.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request employee delete",
-  "description": "Schema for employee delete requests in CRM.",
+  "title": "CRM Response employee delete",
+  "description": "Schema for employee delete responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
