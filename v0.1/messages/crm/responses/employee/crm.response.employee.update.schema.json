@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.employee.update.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.employee.update.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request employee update",
-  "description": "Schema for employee update requests in CRM.",
+  "title": "CRM Response employee update",
+  "description": "Schema for employee update responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [

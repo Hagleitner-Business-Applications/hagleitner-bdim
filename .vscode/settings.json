@@ -266,7 +266,245 @@
         "**/v0.1/**/crm.response.customerPriceGroup.update.*example.json"
       ],
       "url": "./v0.1/messages/crm/responses/customerPriceGroup/crm.response.customerPriceGroup.update.schema.json"
+    },
+
+     {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customer.created.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customer/erp.event.customer.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customer.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customer/erp.event.customer.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customer.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customer/erp.event.customer.updated.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.employee.created.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/employee/erp.event.employee.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.employee.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/employee/erp.event.employee.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.employee.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/employee/erp.event.employee.updated.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.responsibilitycenter.created.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/responsibilitycenter/erp.event.responsibilitycenter.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.responsibilitycenter.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/responsibilitycenter/erp.event.responsibilitycenter.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.responsibilitycenter.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/responsibilitycenter/erp.event.responsibilitycenter.updated.schema.json"
+    },
+
+
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customerPriceGroup.created.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customerPriceGroup/erp.event.customerPriceGroup.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customerPriceGroup.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customerPriceGroup/erp.event.customerPriceGroup.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.customerPriceGroup.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/customerPriceGroup/erp.event.customerPriceGroup.updated.schema.json"
+    },
+
+
+
+
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.responsibilitycenter.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/responsibilitycenter/erp.request.responsibilitycenter.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.responsibilitycenter.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/responsibilitycenter/erp.request.responsibilitycenter.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.responsibilitycenter.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/responsibilitycenter/erp.request.responsibilitycenter.update.schema.json"
+    },
+
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customer.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customer/erp.request.customer.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customer.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customer/erp.request.customer.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customer.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customer/erp.request.customer.update.schema.json"
     }
+,
+
+
+
+
+
+
+
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.employee.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/employee/erp.request.employee.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.employee.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/employee/erp.request.employee.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.employee.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/employee/erp.request.employee.update.schema.json"
+    }
+,
+
+
+        {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customerPriceGroup.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customerPriceGroup/erp.request.customerPriceGroup.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customerPriceGroup.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customerPriceGroup/erp.request.customerPriceGroup.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.request.customerPriceGroup.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/requests/customerPriceGroup/erp.request.customerPriceGroup.update.schema.json"
+    }
+,
+
+
+
+
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.responsibilitycenter.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/responsibilitycenter/erp.response.responsibilitycenter.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.responsibilitycenter.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/responsibilitycenter/erp.response.responsibilitycenter.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.responsibilitycenter.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/responsibilitycenter/erp.response.responsibilitycenter.update.schema.json"
+    },
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customer.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customer/erp.response.customer.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customer.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customer/erp.response.customer.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customer.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customer/erp.response.customer.update.schema.json"
+    }
+,
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customerPriceGroup.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customerPriceGroup/erp.response.customerPriceGroup.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customerPriceGroup.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customerPriceGroup/erp.response.customerPriceGroup.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.customerPriceGroup.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/customerPriceGroup/erp.response.customerPriceGroup.update.schema.json"
+    }
+
 
   ]
 }

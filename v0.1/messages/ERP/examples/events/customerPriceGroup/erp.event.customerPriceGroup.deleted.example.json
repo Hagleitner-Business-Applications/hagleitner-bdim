@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "customerPriceGroup",
+  "operation": "deleted",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+    "id": "123e4567-e89b-12d3-a456-426614174000"
+  }
+}

@@ -34,7 +34,7 @@
         },
         "operation": {
         "type": "string",
-        "description": "Business operation that occurred in CRM.",
+        "description": "Business operation that occurred in the source system.",
         "const": "created"
         },
         "occurredAt": {
@@ -44,10 +44,11 @@
         },
         "payload": {
             "description": "Event payload. Contains the data of the created customer.",
-            "allOf": [
-            { "$ref": "../../../../model/customer/customer.common.schema.json" },
-            { "$ref": "../../../../model/customer/customer.crm.schema.json" }
-            ]
+            "type": "object",
+                "allOf": [
+                  { "$ref": "../../../../model/customer/customer.common.schema.json" },
+                  { "$ref": "../../../../model/customer/customer.crm.schema.json" }
+          ]
         }
     }
 }

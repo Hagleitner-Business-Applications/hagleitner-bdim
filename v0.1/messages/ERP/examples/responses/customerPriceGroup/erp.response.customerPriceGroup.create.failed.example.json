@@ -1,0 +1,30 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "CRM",
+  "objectType": "customerPriceGroup",
+  "operation": "create",
+  "success": false,
+  "exception": {
+    "error": {
+      "code": "validation.failed",
+      "message": "The customerPriceGroup could not be created because required data is missing.",
+      "target": "customerPriceGroup",
+      "details": [
+        {
+          "code": "field.required",
+          "message": "erpTenantIds is required.",
+          "target": "erpTenantIds"
+        },
+        {
+          "code": "field.required",
+          "message": "languageTag is required.",
+          "target": "description.translations[0].languageTag"
+        }
+      ],
+      "innerError": {
+        "correlationId": "8adf0d4c-3a4e-4a3f-b13a-999999999999",
+        "timestamp": "2026-06-23T09:15:42Z"
+      }
+    }
+  }
+}

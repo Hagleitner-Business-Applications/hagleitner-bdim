@@ -1,0 +1,39 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "customer",
+  "operation": "create",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+    "id": "f1c4b7c8-2e9a-4d8a-8d9e-1a2b3c4d5e6f",
+    "erpCustomerNumber": "15988712",
+    "name1": "Muster Hotel GmbH",
+    "address1": "Hotelstraße 1",
+    "postalCode": "6020",
+    "city": "Innsbruck",
+    "countryCode": "AT",
+    "phoneNumber1": "+43512555123",
+    "emailAddress": "office@musterhotel.at",
+
+    "languageTag": "de-AT",
+
+    "roles": [
+      "reseller"
+    ],
+
+    "customerRelations": {
+      "reseller": {
+        "ancestorCustomerId": null
+      }
+    },
+
+    "homepage": "https://www.alpenblick.at",
+    "currency": "EUR",
+    "shippingInstruction": "Complete",
+    "isPremiumCustomer": false,
+    "salesFunnelStage": "NewCustomer",
+    "createdAt": "2026-06-23T09:00:00Z",
+    "createdById": "11111111-1111-4111-8111-111111111111",
+    "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
+  }
+}

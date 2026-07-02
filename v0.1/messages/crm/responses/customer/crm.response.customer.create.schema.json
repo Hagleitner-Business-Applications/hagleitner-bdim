@@ -1,10 +1,10 @@
 {
-  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.request.customer.create.schema.json",
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/crm.response.customer.create.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Request customer create",
-  "description": "Schema for customer create requests in CRM.",
+  "title": "CRM Response customer create",
+  "description": "Schema for customer create responses in CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
@@ -43,7 +43,8 @@
           "description": "Indicates whether the request was processed successfully."
         },
         "payload": {
-          "description": "Business payload returned on success."
+          "description": "Business payload returned on success.",
+          "$ref": "../../../../model/customer/customer.erp.schema.json"
         },
         "exception": {
           "$ref": "../../../common/exception.schema.json"
@@ -60,12 +61,25 @@
           "const": "customer"
         },
         "payload": {
-          "$ref": "#/$defs/idPayload"
+          "description": "Request payload. Contains the data erp customer number returned by the ERP system.",
+          "anyOf": [
+            {    
+              "$ref": "#/$defs/idPayload"
+            },
+            {
+              "$ref": "../../../../model/customer/customer.erp.schema.json"
+            }
+          ]
         }
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",

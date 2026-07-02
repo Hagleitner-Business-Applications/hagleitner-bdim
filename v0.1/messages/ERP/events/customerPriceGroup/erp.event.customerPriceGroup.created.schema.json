@@ -1,0 +1,53 @@
+{
+  "$id": "https://schema.hagleitner.com/bdim/v0.1/erp.event.customerPriceGroup.created.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-06-22",
+  "x-status": "draft",
+  "title": "ERP Event customer price group created",
+  "description": "Schema for customer price group created events in ERP.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "messageVersion",
+    "sourceSystem",
+    "objectType",
+    "operation",
+    "occurredAt",
+    "payload"
+  ],
+  "properties": {
+        "messageVersion": {
+        "type": "string",
+        "pattern": "^\\d+\\.\\d+$",
+        "description": "Message contract version.",
+        "x-layer": "business",
+        "x-status": "draft"
+        },
+        "sourceSystem": {
+        "type": "string",
+        "description": "Source system that generated the event.",
+        "const": "ERP"
+        },
+        "objectType": {
+        "type": "string",
+        "description": "Type of business object affected by the event.",
+        "const": "customerPriceGroup"
+        },
+        "operation": {
+        "type": "string",
+        "description": "Business operation that occurred in ERP.",
+        "const": "created"
+        },
+        "occurredAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Timestamp when the business event occurred in the source system."
+        },
+        "payload": {
+            "description": "Event payload. Contains the data of the created customer price group.",
+            "allOf": [
+            { "$ref": "../../../../model/customerPriceGroup/customerPriceGroup.schema.json" }
+            ]
+        }
+    }
+}
