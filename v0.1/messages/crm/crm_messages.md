@@ -2,10 +2,6 @@
 This document lists all messages of the event pipeline that need to be part of the BDIM. The interface must handle all these messages to ensure that any relevant event or data change is communicated to the BDIM.
 [Event Framework](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/event-framework)
 
-## Datamodel
-This section provides additional information about the CRM data model.
-TODO: insert relevant part of the crm datamodel here
-
 ## Tables and Events
 Every table supports events, and events are produced at different stages of the event pipeline.
 
@@ -38,18 +34,13 @@ CRM Event Associate maps to BDIM Event Update
 CRM Event Dissacociate maps to BDIM Event Update
 
 ### customer
-
-Draft/ TODO:
-A customer is changed in CRM, and the change must be communicated to the Service Bus.
-We distinguish between two categories: events and requests/responses.
-
-
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 ### customerPriceGroup
-Draft/ TODO:
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 ### employee
-Draft/ TODO:
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 ### responsibilityCenter
-Draft/ TODO:
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 
 
 # Examples
@@ -57,15 +48,15 @@ Draft/ TODO:
 ## Events
 
 ### A customer is created in CRM
-
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM. 
 - CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.created.schema.json))
 
 ### A customer is updated in CRM
-
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 - CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.updated.schema.json))
 
 ### A customer is deleted in CRM
-
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM
 - CRM sends a message to the Topic **sbt_crm** ([Schema](./events/customer/crm.event.customer.deleted.schema.json))
 
 > Event operations use the past tense: **created**, **updated**, **deleted**.
@@ -75,6 +66,9 @@ Draft/ TODO:
 ## Requests / Responses
 
 ### A customer has to be synchronized from CRM to ERP
+Currently not part of the project. Synchronization happens currently just one way from ERP to CRM!
+
+Proposal for later phases of the project when bi-directional synchronization with shared ownership is relevant:
 
 1. CRM sends a request message to the queue **sbq_erp** ([Schema](./requests/customer/crm.request.customer.create.schema.json)).
 2. ERP reads the message from **sbq_erp** and processes the request.

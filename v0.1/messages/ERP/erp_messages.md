@@ -1,2 +1,0 @@
-# Business Central Messages
-TODO
