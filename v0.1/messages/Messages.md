@@ -51,14 +51,14 @@ Used to publish events for interested subscribers. This is a fire-and-forget mec
 
 #### Subscriptions (please review this part)
 Every Topic uses the following Subscriptions:
-    * sbts-monitoring
-      Filter Type SqlFilter 1=1, reads all messages from the topic
-    * sbts-upsert-request
-      Filter Type SqlFilter 'upsert-request', reads upsert requests
-    * sbts-upsert-response (TODO: what is it used for?)
-      Filter Type SqlFilter 'upsert-response', reads upsert responses
-    * TODO: what about delete requests? Any other requests?
-      Filter Type TODO
+* sbts-monitoring
+  Filter Type SqlFilter 1=1, reads all messages from the topic
+* sbts-upsert-request
+  Filter Type SqlFilter 'upsert-request', reads upsert requests
+* sbts-upsert-response (TODO: what is it used for?)
+  Filter Type SqlFilter 'upsert-response', reads upsert responses
+* TODO: what about delete requests? Any other requests?
+  Filter Type TODO
 
 ### Queues
 Used to receive requests and responses. An application publishing messages to this queue instructs owning application to perform a specific action.
