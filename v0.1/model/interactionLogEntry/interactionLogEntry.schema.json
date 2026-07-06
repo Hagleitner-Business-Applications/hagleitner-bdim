@@ -1,0 +1,141 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/interactionLogEntry.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-06-07",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "customerId",
+        "contactId",
+        "entryNo",
+        "date",
+        "description",
+        "salespersonId",
+        "userId",
+        "interactionGroup",
+        "interactionTemplate",
+        "campaignNo",
+        "campaignDescription",
+        "segmentNo",
+        "segmentDescription",
+        "documentType",
+        "documentNo",
+        "documentversionNo",
+        "fileattachmentLink",
+        "fileattachmentBase64"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the interactionLogEntry.",
+            "x-status": "draft"
+        },
+        "customerId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the customer.",
+            "x-status": "draft"
+        },
+        "contactId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the contact.",
+            "x-status": "draft"
+        },
+        "entryNo": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The unique entry number for the interaction log entry.",
+            "x-status": "draft"
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "RFC 3339 date-time when the interactionLogEntry was first created in the owning system.",
+            "x-status": "draft"
+        },
+        "description": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "A detailed description of the interaction log entry.",
+            "x-status": "draft"
+        },
+        "salespersonId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the salesperson associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "userId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the user who created the interaction log entry.",
+            "x-status": "draft"
+        },
+        "interactionGroup": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "The code representing the interaction group.",
+            "x-status": "draft"
+        },
+        "interactionTemplate": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "The code representing the interaction template.",
+            "x-status": "draft"
+        },
+        "campaignNo": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The unique campaign number associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "campaignDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "A brief description of the campaign associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "segmentNo": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The unique segment number associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "segmentDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "A brief description of the segment associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "documentType": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 50,
+            "description": "The code representing the document type associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "documentNo": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 20,
+            "description": "The unique document number associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "documentversionNo": {
+            "type": "integer",
+            "minimum": 0,
+            "maxLength": 20,
+            "description": "The unique document version number associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "fileattachmentLink": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "format": "uri",
+            "maxLength": 200,
+            "description": "A link to the file attachment associated with the interaction log entry.",
+            "x-status": "draft"
+        },
+        "fileattachmentBase64": {
+            "$ref": "../components/basetypes.schema.json#/$defs/base64",
+            "description": "The base64 encoded content of the file attachment associated with the interaction log entry.",
+            "x-status": "draft"
+        }
+
+    }
+}

@@ -33,6 +33,12 @@
     },
     {
       "fileMatch": [
+        "**/v0.1/**/interactionLogEntry.example.json"
+      ],
+      "url": "./v0.1/model/interactionLogEntry/interactionLogEntry.schema.json"
+    },
+    {
+      "fileMatch": [
         "**/v0.1/**/crm.event.customer.created.*example.json"
       ],
       "url": "./v0.1/messages/crm/events/customer/crm.event.customer.created.schema.json"

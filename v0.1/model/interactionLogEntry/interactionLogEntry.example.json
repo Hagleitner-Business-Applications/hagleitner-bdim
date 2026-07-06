@@ -1,0 +1,21 @@
+{
+"id": "123465dd-b951-4806-a9e2-85dd5a0e5949",
+"customerId": "8f8665dd-b951-4806-a9e2-85dd5a0e5949",
+"contactId": "8f8665dd-b951-4806-a9e2-85dd5a0e5949",
+"entryNo": "1231236",
+"date": "2023-08-01T10:00:00Z",
+"description": "Reinigungsplan gedruckt",
+"salespersonId": "8f8665dd-b951-4806-a9e2-85dd5a0e5949",
+"userId": "8f8665dd-b951-4806-a9e2-85dd5a0e5949",
+"interactionGroup": "Dosiertechnik",
+"interactionTemplate": "Reinigungsplan", 
+"campaignNo": "KA00012",   
+"campaignDescription": "Beherbergungsgastronomie",
+"segmentNo": "SEG000123",
+"segmentDescription": "Segmentierung Beherbergung",
+"documentType": "Reinigungsplan",
+"documentNo": "HAD_145900029",
+"documentversionNo": 1,
+"fileattachmentLink": "https://sharepoint.hagleitner.com/sites/BDIM/Shared%20Documents/InteractionLogEntry/HAD_145900029.pdf",
+"fileattachmentBase64": "JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PC9UeXBlL1BhZ2UvUGFyZW50IDQgMCBSL1Jlc291cmNlcyA2IDAgUi9NZWRpYUJveFswIDAgNjEyIDc5Ml0vQ29udGVudHMgNyAwIFI+PgplbmRvYmoKNiAwIG9iago8PC9Qcm9jU2V0Wy9QREZdL0ZvbnQgOCAwIFJdPj4KZW5kb2JqCjcgMCBvYmoKPDwvTGVuZ3RoIDg1Pj4Kc3RyZWFtCnic7V1NT9swELz7K5k6aWlq6pS0tLQkq"
+}
