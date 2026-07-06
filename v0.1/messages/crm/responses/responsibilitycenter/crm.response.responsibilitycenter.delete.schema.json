@@ -3,16 +3,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response responsibilitycenter delete",
-  "description": "Schema for responsibility center delete responses in CRM.",
+  "title": "Response responsibilitycenter delete",
+  "description": "Schema for responsibility center delete responses sent back from ERP.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -45,6 +44,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
+          "description": "Exception thrown on error.",
           "$ref": "../../common/exception.schema.json"
         }  
     },

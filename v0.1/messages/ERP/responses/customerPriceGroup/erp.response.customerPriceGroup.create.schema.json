@@ -3,8 +3,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "ERP Response customerPriceGroup create",
-  "description": "Schema for customerPriceGroup create responses in CRM.",
+  "title": "Response customerPriceGroup create",
+  "description": "Schema for customerPriceGroup create responses sent back from CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
@@ -45,7 +45,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../../common/exception.schema.json"
+          "description": "Exception thrown on error."
         }    
     },   
   "oneOf": [
@@ -60,18 +60,31 @@
         },
         "payload": {
           "$ref": "#/$defs/idPayload"
-        }
+        },          
+        "unevaluatedProperties": false
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not ": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",
       "properties": {
         "success": {
           "const": false
-        }
+        },
+        "objectType": {
+          "const": "customerPriceGroup"
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
+        },          
+        "unevaluatedProperties": false
       },
       "required": [
         "exception"
@@ -86,7 +99,6 @@
     "$defs": {
     "idPayload": {
       "type": "object",
-      "unevaluatedProperties": false,
       "required": [
         "id"
       ],

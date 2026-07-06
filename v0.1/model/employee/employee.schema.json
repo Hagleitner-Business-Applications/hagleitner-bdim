@@ -14,12 +14,12 @@
     ],
     "properties": {
         "id": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
             "description": "The unique identifier for the employee.",
             "x-status": "approved"
         },
         "employeeNumber": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
             "maxLength": 20,
             "description": "The unique employee number, this is also used to link the employee to an AD user.",
             "x-status": "approved"
@@ -36,52 +36,52 @@
             "x-status": "approved"
         },
         "salesPersonCode": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
             "maxLength": 10,
             "description": "The unique code for the responsibility center.",
             "x-status": "approved"
         },
         "firstName": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineText",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
             "maxLength": 30,
             "description": "The first name of the employee.",
             "x-status": "approved"
         },
         "lastName": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineText",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
             "maxLength": 30,
             "description": "The last name of the employee.",
             "x-status": "approved"
         },
         "jobCode": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
             "maxLength": 20,
             "description": "Identifies the role of the employee within the organization.",
             "x-status": "approved"
         },
         "phoneNumber": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/phoneE164OrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
             "description": "Phone number of the employee.",
             "x-status": "approved"
         },
         "mobilePhoneNumber": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/phoneE164OrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
             "description": "Mobile phone number of the employee.",
             "x-status": "approved"
         },
         "emailAddress": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/emailOrNull",
             "description": "Email address of the employee.",
             "x-status": "approved"
          },      
          "customerPriceGroup": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
             "maxLength": 10,
             "description": "The code of the customer price group associated with the employee.",
             "x-status": "approved"
          },
          "contentHash": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
             "description": "Hash of the customer content for change detection."
         }
     }

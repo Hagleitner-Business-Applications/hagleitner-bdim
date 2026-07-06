@@ -3,8 +3,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response customer create",
-  "description": "Schema for customer create responses in CRM.",
+  "title": "ERP Response customer create",
+  "description": "Schema for customer create responses from the ERP system.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [

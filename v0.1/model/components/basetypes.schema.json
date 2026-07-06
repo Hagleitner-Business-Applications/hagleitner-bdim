@@ -1,5 +1,5 @@
 {
-    "$id": "https://schema.hagleitner.com/bdim/v0.1/baseTypes.schema.json",
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/basetypes.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "x-revision": "2026-05-20",
     "description": "Base types for various reusable components",

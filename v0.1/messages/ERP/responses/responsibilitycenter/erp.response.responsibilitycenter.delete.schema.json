@@ -11,8 +11,7 @@
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -48,11 +47,65 @@
           "$ref": "../../common/exception.schema.json"
         }  
     },
+    "oneOf": [
+    {
+      "title": "Responsibility center delete success response",
+      "properties": {
+        "success": {
+          "const": true
+        },
+        "objectType": {
+          "const": "responsibilityCenter"
+        },
+        "payload": {
+          "description": "Request payload. Contains the UUID of the deleted business object.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "#/$defs/deletePayload"
+            }
+          ]
+        }
+      },
+      "required": [
+        "payload"
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
+    },
+    {
+      "title": "Error response",
+      "properties": {
+        "success": {
+          "const": false
+        }, 
+        "exception": {
+          "description": "Exception th.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "../../../common/exception.schema.json"
+            }
+          ]     
+        }
+      },
+      "required": [
+        "exception"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
     "$defs": {
         "deletePayload": {
             "type": "object",
             "description": "Minimal payload for delete requests.",
-            "unevaluatedProperties": false,
             "required": [
                 "id"
             ],

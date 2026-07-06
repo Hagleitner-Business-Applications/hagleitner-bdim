@@ -3,8 +3,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response employee create",
-  "description": "Schema for employee create responses in CRM.",
+  "title": "Response employee create",
+  "description": "Schema for employee create responses sent back from ERP.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
@@ -46,6 +46,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
+          "description": "Exception thrown on error.",
           "$ref": "../../../common/exception.schema.json"
         }    
     },   

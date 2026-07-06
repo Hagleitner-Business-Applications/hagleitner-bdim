@@ -3,16 +3,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "ERP Response customer update",
-  "description": "Schema for customer update responses in CRM.",
+  "title": "Response customer update",
+  "description": "Schema for customer update responses sent back from CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -45,7 +44,6 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../common/exception.schema.json"
         }  
     },
     "oneOf": [
@@ -59,18 +57,43 @@
           "const": "customer"
         },
         "payload": {
-          "$ref": "#/$defs/idPayload"
+          "description": "Request payload. Contains the data crm customer number and uuidreturned by the CRM system.",
+          "allOf": [
+            {"$ref": "../../../../model/customer/customer.crm.schema.json"},
+            {"$ref": "#/$defs/idPayload"}     
+          ],
+          "unevaluatedProperties": false
         }
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",
       "properties": {
         "success": {
           "const": false
+        },
+        "objectType": {
+          "const": "customer"
+        },        
+        "payload": {
+          "description": "Exception thrown on error.",
+          "allOf": [
+            {"$ref": "../../../../model/customer/customer.crm.schema.json"},
+            {"$ref": "#/$defs/idPayload"}
+            
+          ],
+          "unevaluatedProperties": false
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
         }
       },
       "required": [
@@ -82,5 +105,18 @@
         ]
       }
     }
-  ]
+  ],
+    "$defs": {
+    "idPayload": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "../../../../model/components/basetypes.schema.json#/$defs/uuid"
+        }
+      }
+    }
+  }
 }

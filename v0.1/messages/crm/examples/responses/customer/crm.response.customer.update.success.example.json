@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "customer",
+  "operation": "update",
+  "success": true,
+  "payload": {
+    "id": "b7e6a1c2-3f4d-4e2a-9b1a-123456789abc"
+  }
+}

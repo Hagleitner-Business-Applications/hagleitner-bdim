@@ -3,39 +3,38 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response customer update",
-  "description": "Schema for customer update responses in CRM.",
+  "title": "Response customer update",
+  "description": "Schema for customer update responses sent back from ERP.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
-        "type": "string",
-        "pattern": "^\\d+\\.\\d+$",
-        "description": "Message contract version.",
-        "x-layer": "business",
-        "x-status": "draft"
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Message contract version.",
+          "x-layer": "business",
+          "x-status": "draft"
         },
         "sourceSystem": {
-        "type": "string",
-        "description": "Source system that generated the event.",
-        "const": "CRM"
+          "type": "string",
+          "description": "Source system that generated the event.",
+          "const": "ERP"
         },
         "objectType": {
-        "type": "string",
-        "description": "Type of business object affected by the event.",
-        "const": "customer"
+          "type": "string",
+          "description": "Type of business object affected by the event.",
+          "const": "customer"
         },
         "operation": {
-        "type": "string",
-        "description": "Business operation that occurred in CRM.",
-        "const": "update"
+          "type": "string",
+          "description": "Business operation that occurred in ERP.",
+          "const": "update"
         },
         "success": {
           "type": "boolean",
@@ -45,7 +44,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../common/exception.schema.json"
+
         }  
     },
     "oneOf": [
@@ -59,18 +58,30 @@
           "const": "customer"
         },
         "payload": {
-          "$ref": "#/$defs/idPayload"
+          "anyOf": [
+            {    
+              "$ref": "#/$defs/idPayload"
+            }
+          ]
         }
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",
       "properties": {
         "success": {
           "const": false
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
         }
       },
       "required": [
@@ -82,5 +93,19 @@
         ]
       }
     }
-  ]
+  ],
+    "$defs": {
+    "idPayload": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "../../../../model/components/basetypes.schema.json#/$defs/uuid"
+        }
+      }
+    }
+  }
 }

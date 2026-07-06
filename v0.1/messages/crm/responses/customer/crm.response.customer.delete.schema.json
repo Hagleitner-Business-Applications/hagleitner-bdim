@@ -3,39 +3,38 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response customer delete",
-  "description": "Schema for customer delete responses in CRM.",
+  "title": "Response customer delete",
+  "description": "Schema for customer delete responses sent back from ERP.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
-        "type": "string",
-        "pattern": "^\\d+\\.\\d+$",
-        "description": "Message contract version.",
-        "x-layer": "business",
-        "x-status": "draft"
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Message contract version.",
+          "x-layer": "business",
+          "x-status": "draft"
         },
         "sourceSystem": {
-        "type": "string",
-        "description": "Source system that generated the event.",
-        "const": "CRM"
+          "type": "string",
+          "description": "Source system that generated the event.",
+          "const": "ERP"
         },
         "objectType": {
-        "type": "string",
-        "description": "Type of business object affected by the event.",
-        "const": "customer"
+          "type": "string",
+          "description": "Type of business object affected by the event.",
+          "const": "customer"
         },
         "operation": {
-        "type": "string",
-        "description": "Business operation that occurred in CRM.",
-        "const": "delete"
+          "type": "string",
+          "description": "Business operation that occurred in ERP.",
+          "const": "delete"
         },
         "success": {
           "type": "boolean",
@@ -45,9 +44,63 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../common/exception.schema.json"
+          "description": "Exception thrown on error."
         }  
+    },"oneOf": [
+    {
+      "title": "Customer delete success response",
+      "properties": {
+        "success": {
+          "const": true
+        },
+        "objectType": {
+          "const": "customer"
+        },
+        "payload": {
+          "description": "Request payload. Contains the UUID of the deleted business object.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "#/$defs/deletePayload"
+            }
+          ]
+        }
+      },
+      "required": [
+        "payload"
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
+    {
+      "title": "Error response",
+      "properties": {
+        "success": {
+          "const": false
+        }, 
+        "exception": {
+          "description": "Request payload. Contains the UUID of the deleted business object.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "../../../common/exception.schema.json"
+            }
+          ]     
+        }
+      },
+      "required": [
+        "exception"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
     "$defs": {
         "deletePayload": {
             "type": "object",

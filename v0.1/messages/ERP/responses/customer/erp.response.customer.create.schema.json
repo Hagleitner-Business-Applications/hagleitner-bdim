@@ -3,8 +3,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "ERP Response customer create",
-  "description": "Schema for customer create responses in CRM.",
+  "title": "Response customer create",
+  "description": "Schema for customer create responses sent back from CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
@@ -45,7 +45,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../../common/exception.schema.json"
+          "description": "Exception thrown on error."
         }    
     },   
   "oneOf": [
@@ -64,7 +64,8 @@
             {
               "$ref": "../../../../model/customer/customer.crm.schema.json"
             }
-          ]
+          ]          
+          ,"unevaluatedProperties": false
         }
       },
       "required": [
@@ -81,7 +82,14 @@
       "properties": {
         "success": {
           "const": false
-        }
+        },
+        "objectType": {
+          "const": "customer"
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
+        },         
+        "unevaluatedProperties": false
       },
       "required": [
         "exception"
@@ -96,7 +104,6 @@
     "$defs": {
     "idPayload": {
       "type": "object",
-      "unevaluatedProperties": false,
       "required": [
         "id"
       ],

@@ -7,7 +7,7 @@
     "unevaluatedProperties": false,
     "properties": {
         "contentHash": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
             "description": "Hash of the customer content for change detection."
         }
     },

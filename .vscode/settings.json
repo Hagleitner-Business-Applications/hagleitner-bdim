@@ -503,6 +503,25 @@
         "**/v0.1/**/erp.response.customerPriceGroup.update.*example.json"
       ],
       "url": "./v0.1/messages/erp/responses/customerPriceGroup/erp.response.customerPriceGroup.update.schema.json"
+    },
+    
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.employee.create.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/employee/erp.response.employee.create.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.employee.delete.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/employee/erp.response.employee.delete.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.response.employee.update.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/responses/employee/erp.response.employee.update.schema.json"
     }
 
 

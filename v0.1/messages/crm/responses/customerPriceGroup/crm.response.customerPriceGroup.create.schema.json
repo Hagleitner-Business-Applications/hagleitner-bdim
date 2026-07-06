@@ -3,8 +3,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "CRM Response customerPriceGroup create",
-  "description": "Schema for customerPriceGroup create responses in CRM.",
+  "title": "Response customerPriceGroup create",
+  "description": "Schema for customerPriceGroup create responses sent back from ERP.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
@@ -35,7 +35,7 @@
         },
         "operation": {
           "type": "string",
-          "description": "Business operation that occurred in CRM.",
+          "description": "Business operation that occurred in ERP.",
           "const": "create"
         },
         "success": {
@@ -46,6 +46,7 @@
           "description": "Business payload returned on success."
         },
         "exception": {
+          "description": "Exception thrown on error.", 
           "$ref": "../../../common/exception.schema.json"
         }    
     },   
@@ -72,6 +73,9 @@
       "properties": {
         "success": {
           "const": false
+        },
+        "exception": {
+         
         }
       },
       "required": [
@@ -87,7 +91,6 @@
     "$defs": {
     "idPayload": {
       "type": "object",
-      "unevaluatedProperties": false,
       "required": [
         "id"
       ],
@@ -95,7 +98,8 @@
         "id": {
           "$ref": "../../../../model/components/basetypes.schema.json#/$defs/uuid"
         }
-      }
+      },        
+      "unevaluatedProperties": false
     }
   }
 }

@@ -3,16 +3,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "ERP Response customerPriceGroup delete",
-  "description": "Schema for customerPriceGroup delete responses in CRM.",
+  "title": "Response customerPriceGroup delete",
+  "description": "Schema for customerPriceGroup delete responses sent back from CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -48,11 +47,65 @@
           "$ref": "../../common/exception.schema.json"
         }  
     },
+    "oneOf": [
+    {
+      "title": "CustomerPriceGroup delete success response",
+      "properties": {
+        "success": {
+          "const": true
+        },
+        "objectType": {
+          "const": "customerPriceGroup"
+        },
+        "payload": {
+          "description": "Request payload. Contains the UUID of the deleted business object.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "#/$defs/deletePayload"
+            }
+          ]
+        }
+      },
+      "required": [
+        "payload"
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
+    },
+    {
+      "title": "Error response",
+      "properties": {
+        "success": {
+          "const": false
+        }, 
+        "exception": {
+          "description": "Exception thrown on error.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "../../../common/exception.schema.json"
+            }
+          ]     
+        }
+      },
+      "required": [
+        "exception"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
     "$defs": {
         "deletePayload": {
             "type": "object",
             "description": "Minimal payload for delete requests.",
-            "unevaluatedProperties": false,
             "required": [
                 "id"
             ],

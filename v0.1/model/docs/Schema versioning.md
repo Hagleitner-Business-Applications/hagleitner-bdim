@@ -53,6 +53,6 @@ When a version is bumped (folder copy to `v0.2/`), reset `x-revision` in every f
 
 ## Conventions that keep this cheap
 
-- Always use **relative `$ref`s** within a version (e.g. `../components/baseTypes.schema.json`). A version bump then needs only the folder copy + `$id` rewrite — no `$ref` edits.
+- Always use **relative `$ref`s** within a version (e.g. `../components/basetypes.schema.json`). A version bump then needs only the folder copy + `$id` rewrite — no `$ref` edits.
 - The `$id` filename must match the actual file path on disk.
 - Never reuse a published `$id` for a schema with different semantics.

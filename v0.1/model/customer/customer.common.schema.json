@@ -14,50 +14,50 @@
     ],
     "properties": {
         "id": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
             "description": "UUID uniquely identifying the customer.",
             "x-status": "approved"
         },
         "erpTenantId": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
             "description": "UUID of the ERP tenant associated with this customer. This Id must be set by the owning system.",
             "x-status": "approved"
         },
         "name1": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineText",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
             "maxLength": 100,
             "description": "Primary customer name line.",
             "x-status": "approved"
         },
         "name2": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 50,
             "description": "Secondary customer name line.",
             "x-status": "approved"
         },
         "name3": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 30,
             "description": "Tertiary customer name line.",
             "x-status": "approved"
         },
         "phoneNumber1": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/phoneE164OrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
             "description": "Phone number 1",
             "x-status": "approved"
         },
         "phoneNumber2": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/phoneE164OrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
             "description": "Phone number 2",
             "x-status": "approved"
         },
         "emailAddress": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/emailOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/emailOrNull",
             "description": "Email address of the customer.",
             "x-status": "approved"
         },
         "responsibilityCenterId": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
             "description": "UUID referencing the responsibility center that this customer is assigned to.",
             "x-status": "approved"
         },
@@ -80,7 +80,7 @@
             "x-status": "approved"
         },
         "languageTag": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/languageTag",
+            "$ref": "../components/basetypes.schema.json#/$defs/languageTag",
             "description": "A BCP47 language tag that identifies the language context, often including region or script. The language tag is used as the key for resolving a locale or culture with concrete formatting conventions.",
             "x-status": "approved"
         },
@@ -95,32 +95,32 @@
             "type": "object",
             "properties": {
                 "vatNumber": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 20,
                     "x-status": "approved"
                 },
                 "eoriNumber": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 40,
                     "x-status": "approved"
                 },
                 "taxNumber1": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 50,
                     "x-status": "approved"
                 },
                 "taxNumber2": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 80,
                     "x-status": "approved"
                 },
                 "taxNumber3": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 30,
                     "x-status": "approved"
                 },
                 "taxNumber4": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 30,
                     "x-status": "approved"
                 }
@@ -157,7 +157,7 @@
                     ],
                     "properties": {
                         "ancestorCustomerId": {
-                            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                             "description": "UUID of the ancestor reseller customer, null only for the root customer.",
                             "x-status": "approved"
                         }
@@ -173,7 +173,7 @@
                     ],
                     "properties": {
                         "ancestorCustomerId": {
-                            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                             "description": "UUID of the ancestor invoice recipient customer.",
                             "x-status": "approved"
                         }
@@ -189,7 +189,7 @@
                     ],
                     "properties": {
                         "ancestorCustomerId": {
-                            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                             "description": "UUID of the ancestor condition owner customer.",
                             "x-status": "approved"
                         }
@@ -205,7 +205,7 @@
                     ],
                     "properties": {
                         "ancestorCustomerId": {
-                            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                             "description": "UUID of the ancestor hierarchy parent customer.",
                             "x-status": "approved"
                         }
@@ -264,7 +264,7 @@
             "x-status": "approved"
         },
         "defaultCustomerReference": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 35,
             "description": "Reference to use on invoices and other documents when the customer provides no specific reference.",
             "x-status": "approved"
@@ -279,17 +279,17 @@
             "description": "Information about our contact persons at the customer's organization.",
             "properties": {
                 "salesPersonEmployeeId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "UUID of the salesperson employee who is responsible for the customer.",
                     "x-status": "approved"
                 },
                 "advisorId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "UUID of the advisor employee who is responsible for the customer.",
                     "x-status": "approved"
                 },
                 "personInChargeId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "UUID of the person in charge employee who is responsible for the customer.",
                     "x-status": "approved"
                 }
@@ -297,7 +297,7 @@
             "x-status": "approved"
         },
         "shippingAgentCode": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
             "maxLength": 10,
             "description": "Code identifying the customer's shipping agent.",
             "x-status": "approved"
@@ -306,22 +306,22 @@
             "type": "object",
             "properties": {
                 "salesClass": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 10,
                     "x-status": "approved"
                 },
                 "potential": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 10,
                     "x-status": "approved"
                 },
                 "divisionCode": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 10,
                     "x-status": "approved"
                 },
                 "subdivisionCode": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 20,
                     "x-status": "approved"
                 }
@@ -332,7 +332,7 @@
             "type": "object",
             "properties": {
                 "customerPriceGroupId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "UUID referencing the customer price group that is assigned to the customer.",
                     "x-status": "approved"
                 },
@@ -342,7 +342,7 @@
                     "x-status": "approved"
                 },
                 "priceBookGroupId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "can only be set if the isPriceGroupCustomer is set to true",
                     "x-status": "approved"
                 },
@@ -382,17 +382,17 @@
                     "x-status": "approved"
                 },
                 "paymentTermsId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "description": "UUID referencing the payment terms assigned to the customer.",
                     "x-status": "approved"
                 },
                 "paymentMethodCode": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 10,
                     "x-status": "approved"
                 },
                 "creditStandingCode": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "maxLength": 10,
                     "x-status": "approved"
                 },
@@ -444,15 +444,15 @@
             "type": "object",
             "properties": {
                 "customerGroupId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
                     "x-status": "approved"
                 },
                 "membershipNumber": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "x-status": "approved"
                 },
                 "glnMembershipNumber": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/codeOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "x-status": "approved"
                 },
                 "membershipSince": {
@@ -466,16 +466,16 @@
                     "x-status": "approved"
                 },
                 "bonusGroup": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "maxLength": 20,
                     "x-status": "approved"
                 },
                 "purchaseGroup": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 },
                 "billersInvoiceRecipientId": {
-                    "$ref": "../components/baseTypes.schema.json#/$defs/singleLineTextOrNull",
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 }
             },
@@ -492,7 +492,7 @@
             "x-status": "approved"
         },
         "createdById": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
             "description": "UUID of the employee who created the customer.",
             "x-status": "approved"
         },
@@ -503,7 +503,7 @@
             "x-status": "approved"
         },
         "updatedById": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuidOrNull",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
             "description": "UUID of the employee who last updated the customer.",
             "x-status": "approved"
         },

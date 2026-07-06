@@ -1,24 +1,24 @@
 {
   "messageVersion": "1.0",
-  "sourceSystem": "CRM",
-  "objectType": "responsibilityCenter",
-  "operation": "create",
+  "sourceSystem": "ERP",
+  "objectType": "customer",
+  "operation": "delete",
   "success": false,
   "exception": {
     "error": {
       "code": "validation.failed",
-      "message": "The responsibility center could not be created because required data is missing.",
-      "target": "responsibilityCenter",
+      "message": "The customer could not be created because required data is missing.",
+      "target": "customer",
       "details": [
         {
           "code": "field.required",
-          "message": "Cost center is required.",
-          "target": "costCenter"
+          "message": "VAT number is required.",
+          "target": "taxNumbers.vatNumber"
         },
         {
           "code": "field.required",
-          "message": "code is required.",
-          "target": "code"
+          "message": "Payment terms must be specified.",
+          "target": "billingAndPayment.paymentTermsId"
         }
       ],
       "innerError": {

@@ -1,6 +1,6 @@
 {
   "messageVersion": "1.0",
-  "sourceSystem": "ERP",
+  "sourceSystem": "CRM",
   "objectType": "employee",
   "operation": "create",
   "success": true,

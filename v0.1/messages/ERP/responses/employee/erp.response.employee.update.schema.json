@@ -11,8 +11,7 @@
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -59,18 +58,40 @@
           "const": "employee"
         },
         "payload": {
-          "$ref": "#/$defs/idPayload"
+          "description": "Request payload. Contains the uuid returned by the CRM system.",
+          "allOf": [
+            {"$ref": "#/$defs/idPayload"}     
+          ],
+          "unevaluatedProperties": false
         }
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",
       "properties": {
         "success": {
           "const": false
+        },
+        "objectType": {
+          "const": "employee"
+        },        
+        "payload": {
+          "description": "Exception thrown on error.",
+          "allOf": [
+            {"$ref": "#/$defs/idPayload"}        
+          ],
+          "unevaluatedProperties": false
+        },
+        "exception": {
+          "$ref": "../../../common/exception.schema.json"
         }
       },
       "required": [
@@ -82,5 +103,18 @@
         ]
       }
     }
-  ]
+  ],
+    "$defs": {
+    "idPayload": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "../../../../model/components/basetypes.schema.json#/$defs/uuid"
+        }
+      }
+    }
+  }
 }

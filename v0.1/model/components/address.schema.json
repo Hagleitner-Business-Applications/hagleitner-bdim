@@ -10,27 +10,27 @@
     ],
     "properties": {
         "address1": {
-            "$ref": "baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 100,
             "x-status": "approved"
         },
         "address2": {
-            "$ref": "baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 50,
             "x-status": "approved"
         },
         "postalCode": {
-            "$ref": "baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 20,
             "x-status": "needsDiscussion"
         },
         "city": {
-            "$ref": "baseTypes.schema.json#/$defs/singleLineText",
+            "$ref": "basetypes.schema.json#/$defs/singleLineText",
             "maxLength": 30,
             "x-status": "needsDiscussion"
         },
         "stateOrProvince": {
-            "$ref": "baseTypes.schema.json#/$defs/singleLineTextOrNull",
+            "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull",
             "maxLength": 30,
             "x-status": "approved"
         },
@@ -41,11 +41,11 @@
             "x-status": "approved"
         },
         "geoLocation": {
-            "$ref": "baseTypes.schema.json#/$defs/geoLocation",
+            "$ref": "basetypes.schema.json#/$defs/geoLocation",
             "x-status": "approved"
          },        
          "contentHash": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
             "description": "Hash of the customer content for change detection."
         }
     },

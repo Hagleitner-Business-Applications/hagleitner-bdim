@@ -64,7 +64,13 @@
       },
       "required": [
         "payload"
-      ]
+      ],
+      "not":
+      {
+        "required": [
+          "exception"
+        ]
+      }
     },
     {
       "title": "Error response",

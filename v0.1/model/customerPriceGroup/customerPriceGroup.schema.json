@@ -12,25 +12,25 @@
     ],
     "properties": {
         "id": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/uuid",
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
             "description": "The unique identifier for the customer price group.",
             "x-status": "approved"
         },
         "code": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/code",
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
             "maxLength": 20,
             "description": "The unique code for the responsibility center.",
             "x-status": "approved"
         },
         "description": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/localizedText",
+            "$ref": "../components/basetypes.schema.json#/$defs/localizedText",
             "description": "Description of the customer price group.",
             "x-status": "approved"
         },
         "erpTenantIds": {
             "type": "array",
             "items": {
-                "$ref": "../components/baseTypes.schema.json#/$defs/uuid"
+                "$ref": "../components/basetypes.schema.json#/$defs/uuid"
             },
             "description": "UUIDs of the ERP tenants associated with this customer. These Ids must be set by the owning system.",
             "minItems": 1,
@@ -43,7 +43,7 @@
             "default": false
         },
         "contentHash": {
-            "$ref": "../components/baseTypes.schema.json#/$defs/contentHash",
+            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
             "description": "Hash of the customer content for change detection."
         }
     }

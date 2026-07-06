@@ -3,16 +3,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "x-revision": "2026-06-22",
   "x-status": "draft",
-  "title": "ERP Response customer delete",
-  "description": "Schema for customer delete responses in CRM.",
+  "title": "Response customer delete",
+  "description": "Schema for customer delete responses sent back from CRM.",
   "type": "object",
   "unevaluatedProperties": false,
   "required": [
     "messageVersion",
     "sourceSystem",
     "objectType",
-    "operation",
-    "payload"
+    "operation"
   ],
   "properties": {
         "messageVersion": {
@@ -45,14 +44,70 @@
           "description": "Business payload returned on success."
         },
         "exception": {
-          "$ref": "../../common/exception.schema.json"
+           "description": "Exception thrown on error."
         }  
+    },"oneOf": [
+    {
+      "title": "Customer delete success response",
+      "properties": {
+        "success": {
+          "const": true
+        },
+        "objectType": {
+          "const": "customer"
+        },
+        "payload": {
+          "description": "Request payload. Contains the UUID of the deleted business object.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "#/$defs/deletePayload"
+            },
+            {    
+              "$ref": "../../../../model/customer/customer.crm.schema.json"
+            }
+          ]
+        }
+      },
+      "required": [
+        "payload"
+      ],
+      "not": {
+        "required": [
+          "exception"
+        ]
+      }
     },
+    {
+      "title": "Error response",
+      "properties": {
+        "success": {
+          "const": false
+        }, 
+        "exception": {
+          "description": "Exception thrown on error.",
+          "unevaluatedProperties": false,
+          "allOf": [
+            {    
+              "$ref": "../../../common/exception.schema.json"
+            }
+          ]     
+        }
+      },
+      "required": [
+        "exception"
+      ],
+      "not": {
+        "required": [
+          "payload"
+        ]
+      }
+    }
+  ],
     "$defs": {
         "deletePayload": {
             "type": "object",
             "description": "Minimal payload for delete requests.",
-            "unevaluatedProperties": false,
             "required": [
                 "id"
             ],
