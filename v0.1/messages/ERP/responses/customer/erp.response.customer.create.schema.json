@@ -63,6 +63,9 @@
           "allOf": [
             {
               "$ref": "../../../../model/customer/customer.crm.schema.json"
+            },
+            {
+              "$ref": "#/$defs/idPayload"
             }
           ]          
           ,"unevaluatedProperties": false

@@ -9,12 +9,18 @@
   "phoneNumber1": "+431234567890",
   "phoneNumber2": "+431234567891",
   "emailAddress": "office@acme.com",
+  "responsibilityCenterId": "8f5c1234-0dde-4b87-b31b-4d5f256ff0e2",
   "blockedFor": "shipping",
-  "blockedForReason": "51282897-0fc7-4657-8eab-e10ed413eef9",
+  "blockedForReason": "Customer requested temporary shipping block",
   "languageTag": "de-AT",
   "timezone": "Europe/Vienna",
   "taxNumbers": {
-    "vatNumber": "ATU12345678"
+    "vatNumber": "ATU12345678",
+    "eoriNumber": "AT1234567890",
+    "taxNumber1": "TAX-001",
+    "taxNumber2": "TAX-002",
+    "taxNumber3": "TAX-003",
+    "taxNumber4": "TAX-004"
   },
   "roles": [
     "reseller"
@@ -33,9 +39,57 @@
       "ancestorCustomerId": "03e1bd90-398b-4d4b-b860-e7741695eac5"
     }
   },
+  "homepage": "https://www.acme.example",
+  "currency": "EUR",
+  "shippingInstruction": "Complete",
+  "isPremiumCustomer": false,
+  "salesFunnelStage": "ExistingCustomer",
+  "defaultCustomerReference": "REF-1001",
+  "requestForErpCustomerBlock": false,
+  "ourContactPersons": {
+    "salesPersonEmployeeId": "4b7b24f1-2cb9-4a1d-9d2c-4e0f0f2f7e11",
+    "advisorId": "2c2e9964-65b6-4ca2-95ef-ca18192f9e70",
+    "personInChargeId": "6e5a0c32-e8ff-4484-a4fd-82b5d8f8d632"
+  },
+  "shippingAgentCode": "DHL",
+  "classifications": {
+    "salesClass": "S1",
+    "potential": "P2",
+    "divisionCode": "DIV1",
+    "subdivisionCode": "SUBDIV01"
+  },
+  "billingAndPayment": {
+    "customerPriceGroupId": "31f2fa8a-6511-4f18-a877-42eb4a0c0494",
+    "isPriceGroupCustomer": true,
+    "priceBookGroupId": "1eb6db41-55c7-4c0d-8f01-1b2fbc5dd29a",
+    "ignoreMaterialSurcharge": false,
+    "excludeFromMinQuantitySurcharge": true,
+    "salesOnlyWithSpecialPrice": false,
+    "orderLimitActive": true,
+    "combineShipments": true,
+    "purchasingAssociation": false,
+    "bundleReturn": true,
+    "paymentTermsId": "f7362e0d-3451-4b44-a6d0-7532d2a12bd2",
+    "paymentMethodCode": "BANK",
+    "creditStandingCode": "GOOD",
+    "creditStandingCheckStatus": "Checked",
+    "creditStandingCheckDate": "2026-06-23T09:25:00Z"
+  },
+  "customerGroupMembership": {
+    "customerGroupId": "2ef80f1d-794f-4f72-b5de-6d39f3e605cf",
+    "membershipNumber": "M1001",
+    "glnMembershipNumber": "GLN1001",
+    "membershipSince": "2024-01-01",
+    "membershipUntil": "2026-12-31",
+    "bonusGroup": "BASIC",
+    "purchaseGroup": "WHOLESALE",
+    "billersInvoiceRecipientId": "INV-1001"
+  },
   "openingHours": {
     "intervals": [
       {
+        "seasonCode": "Summer",
+        "area": "Salesperson",
         "startingDate": "2026-01-01",
         "endingDate": "2026-12-31",
         "days": [
@@ -48,6 +102,13 @@
               "wednesday",
               "thursday",
               "friday"
+            ]
+          },
+          {
+            "opensAt": "09:00",
+            "closesAt": "12:00",
+            "weekdays": [
+              "saturday"
             ]
           }
         ]
@@ -67,13 +128,13 @@
   "address2": null,
   "postalCode": "9000",
   "city": "Innsbruck",
-  "stateOrProvince": null,
+  "stateOrProvince": "Tirol",
   "countryCode": "AT",
   "geoLocation": {
     "latitude": 47.202778,
     "longitude": 14.280833
   },
   "createdAt": "2025-03-15T08:30:00Z",
-  "updatedAt": "2025-03-20T12:15:00+02:00",
+  "createdById": "11111111-1111-4111-8111-111111111111",
   "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }

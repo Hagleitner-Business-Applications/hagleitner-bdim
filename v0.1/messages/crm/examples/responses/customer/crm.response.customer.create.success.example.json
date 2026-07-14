@@ -6,6 +6,56 @@
   "success": true,
   "payload": {
     "id": "b7e6a1c2-3f4d-4e2a-9b1a-123456789abc",
-    "erpCustomerNumber": "1234567890"
+    "crmCustomerNumber": "A12345",
+    "erpCustomerNumber": "1234567890",
+    "erpTenantId": "c0f28562-5896-47c2-905f-2fe079ad18f8",
+    "name1": "Muster Hotel GmbH",
+    "name2": "Sales Department",
+    "address1": "Hotelstraße 1",
+    "postalCode": "6020",
+    "city": "Innsbruck",
+    "countryCode": "AT",
+    "phoneNumber1": "+43512555123",
+    "emailAddress": "office@musterhotel.at",
+    "languageTag": "de-AT",
+    "roles": [
+      "reseller"
+    ],
+    "customerRelations": {
+      "reseller": {
+        "ancestorCustomerId": null
+      }
+    },
+    "openingHours": {
+      "intervals": [
+        {
+          "startingDate": "2026-01-01",
+          "endingDate": "2026-12-31",
+          "days": [
+            {
+              "opensAt": "08:00",
+              "closesAt": "16:00",
+              "weekdays": [
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingDays": [
+        {
+          "startAt": "2026-12-24T12:00:00Z",
+          "endAt": "2026-12-26T23:59:59Z",
+          "reason": "Christmas closure"
+        }
+      ]
+    },
+    "createdAt": "2026-06-23T09:00:00Z",
+    "createdById": "11111111-1111-4111-8111-111111111111",
+    "contentHash": "8d969eef6ecad3c29a3a629280e686cff8fab7f5f2b7fcb8b0b3e3c8c5b4c7d2"
   }
 }
