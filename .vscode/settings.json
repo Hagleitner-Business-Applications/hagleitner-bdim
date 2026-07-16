@@ -36,6 +36,12 @@
         "**/v0.1/**/interactionLogEntry.example.json"
       ],
       "url": "./v0.1/model/interactionLogEntry/interactionLogEntry.schema.json"
+    },    
+    {
+      "fileMatch": [
+        "**/v0.1/**/contact.example.json"
+      ],
+      "url": "./v0.1/model/contact/contact.schema.json"
     },
     {
       "fileMatch": [

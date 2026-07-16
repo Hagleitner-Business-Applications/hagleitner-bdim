@@ -1,0 +1,223 @@
+{
+    "$id": "https://schema.hagleitner.com/bdim/v0.1/contact.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-07-16",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "parentAccountId",
+        "erpContactNumber",
+        "erpTenantId",
+        "firstName",
+        "lastName"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the contact.",
+            "x-status": "approved"
+        },
+        "parentAccountId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the parent account.",
+            "x-status": "approved"
+        },
+        "erpContactNumber": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 30,
+            "description": "The ERP contact number.",
+            "x-status": "approved"
+        },
+        "erpTenantId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the ERP tenant.",
+            "x-status": "approved"
+        },
+        "firstName": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "The first name of the contact.",
+            "x-status": "approved"
+        },
+        "lastName": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "The last name of the contact.",
+            "x-status": "approved"
+        },
+        "salutation": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "The salutation of the contact.",
+            "x-status": "approved"
+        },
+        "titlePre": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "The academic or professional title placed before the contact's name.",
+            "x-status": "approved"
+        },
+        "titlePost": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "The academic or professional title placed after the contact's name.",
+            "x-status": "approved"
+        },
+        "positionCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Code identifying the contact's position within the organization.",
+            "x-status": "needsDiscussion"
+        },
+        "language": {
+            "anyOf": [
+                {
+                    "$ref": "../components/basetypes.schema.json#/$defs/languageTag"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "maxLength":10,
+            "description": "The preferred language of the contact as a BCP 47 language tag.",
+            "x-status": "approved"
+        },
+        "address1": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 100,
+            "description": "Primary address line of the contact.",
+            "x-status": "approved"
+        },
+        "address2": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "Secondary address line of the contact.",
+            "x-status": "approved"
+        },
+        "postalCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 20,
+            "description": "Postal code of the contact's address.",
+            "x-status": "needsDiscussion"
+        },
+        "city": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "City of the contact's address.",
+            "x-status": "needsDiscussion"
+        },
+        "stateOrProvince": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "State or province of the contact's address.",
+            "x-status": "approved"
+        },
+        "countryCode": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "pattern": "^[A-Z]{2}$",
+            "description": "An ISO 3166-1 alpha-2 country code.",
+            "x-status": "approved"
+        },
+        "geoLocation": {
+            "$ref": "../components/basetypes.schema.json#/$defs/geoLocation",
+            "x-status": "approved"
+         },  
+        "phoneNumber1": {
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
+            "maxLength": 30,
+            "description": "Primary phone number of the contact.",
+            "x-status": "approved"
+        },
+        "phoneNumber2": {
+            "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
+            "maxLength": 30,
+            "description": "Secondary phone number of the contact.",
+            "x-status": "approved"
+        },
+        "eMailAddress": {
+            "$ref": "../components/basetypes.schema.json#/$defs/emailOrNull",
+            "maxLength": 80,
+            "description": "Primary email address of the contact.",
+            "x-status": "approved"
+        },
+        "noEMailAddress": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates that the contact has no email address.",
+            "x-status": "approved"
+        },
+        "checkedEMailAddress": {
+            "type": "boolean",
+            "default": false,
+            "description": "Email address has been checked",
+            "x-status": "approved"
+        },
+        "eMailBounceStatus": {
+            "type": "number",
+            "description": "Representing the email bounce status of the contact.",
+            "x-status": "needsDiscussion"
+        },
+        "inactive": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the contact is inactive.",
+            "x-status": "approved"
+        },
+        "correspondenceType": {
+            "type": "number",
+            "description": "Code identifying the preferred correspondence type of the contact.",
+            "x-status": "needsDiscussion"
+        },
+        "noNewsletter": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates that the contact must not receive newsletters.",
+            "x-status": "approved"
+        },
+        "excludeFromSegment": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates that the contact must be excluded from marketing segments.",
+            "x-status": "approved"
+        },
+        "webRole": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 30,
+            "description": "Code identifying the contact's role in web applications.",
+            "x-status": "needsDiscussion"
+        },
+        "loginEMail": {
+            "$ref": "../components/basetypes.schema.json#/$defs/emailOrNull",
+            "maxLength": 80,
+            "description": "Email address used by the contact to log in to web applications.",
+            "x-status": "approved"
+        },
+        "webshopContactSince": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time",
+            "description": "RFC 3339 date-time since which the contact has been registered for the webshop.",
+            "x-status": "approved"
+        },
+        "webshopLastLoginDate": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time",
+            "description": "RFC 3339 date-time of the contact's most recent webshop login.",
+            "x-status": "approved"
+        }
+    },
+    "dependentRequired": {
+        "address2": [
+            "address1"
+        ]
+    }
+}

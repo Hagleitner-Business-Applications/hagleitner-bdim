@@ -1,0 +1,43 @@
+{
+  "id": "123e4567-e89b-12d3-a456-426614174100",
+  "parentAccountId": "123e4567-e89b-12d3-a456-426614174101",
+  "erpContactNumber": "C100001",
+  "erpTenantId": "123e4567-e89b-12d3-a456-426614174102",
+
+  "firstName": "Max",
+  "lastName": "Mustermann",
+  "salutation": "Mr.",
+  "titlePre": "Dr.",
+  "titlePost": "MBA",
+  "positionCode": "CEO",
+  "language": "de-AT",
+
+  "address1": "Musterstraße 10",
+  "address2": "Building A",
+  "postalCode": "6020",
+  "city": "Innsbruck",
+  "stateOrProvince": "Tyrol",
+  "countryCode": "AT",
+  "geoLocation": {
+    "latitude": 47.2692,
+    "longitude": 11.4041,
+    "elevation": 574
+  },
+
+  "phoneNumber1": "+43512555123",
+  "phoneNumber2": "+436641234567",
+  "eMailAddress": "max.mustermann@example.com",
+  "noEMailAddress": false,
+  "checkedEMailAddress": true,
+  "eMailBounceStatus": 0,
+
+  "inactive": false,
+  "correspondenceType": 1,
+  "noNewsletter": false,
+  "excludeFromSegment": false,
+
+  "webRole": "ADMIN",
+  "loginEMail": "max.mustermann@example.com",
+  "webshopContactSince": "2025-02-15T08:30:00Z",
+  "webshopLastLoginDate": "2026-07-15T16:42:18Z"
+}
