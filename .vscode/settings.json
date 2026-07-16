@@ -122,9 +122,6 @@
 
 
 
-
-
-
     {
       "fileMatch": [
         "**/v0.1/**/crm.request.responsibilitycenter.create.*example.json"
@@ -358,6 +355,31 @@
     },
 
 
+
+
+
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.contact.created.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/contact/erp.event.contact.created.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.contact.deleted.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/contact/erp.event.contact.deleted.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/erp.event.contact.updated.*example.json"
+      ],
+      "url": "./v0.1/messages/erp/events/contact/erp.event.contact.updated.schema.json"
+    },
+
+
+
+    
 
 
 

@@ -1,0 +1,54 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "contact",
+  "operation": "updated",
+  "occurredAt": "2026-07-16T14:12:45Z",
+  "payload": {
+    "id": "8b3a6c82-c6d0-4c5a-b0c5-5d89bfb3a1c2",
+    "parentAccountId": "1b0f1c2d-3e4f-5678-90ab-cdef12345678",
+    "erpContactNumber": "CNT000123",
+    "erpTenantId": "9d1e4d43-2b56-4d75-8b4d-9d2c3b5d8f77",
+
+    "firstName": "John",
+    "lastName": "Doe",
+    "salutation": "Mr.",
+    "titlePre": "Dr.",
+    "titlePost": "MBA",
+
+    "positionCode": "CEO",
+    "language": "en-GB",
+
+    "address1": "Innovation Park 5",
+    "address2": null,
+    "postalCode": "6020",
+    "city": "Innsbruck",
+    "stateOrProvince": "Tyrol",
+    "countryCode": "AT",
+
+    "geoLocation": {
+      "latitude": 47.2692,
+      "longitude": 11.4041,
+      "elevation": 574
+    },
+
+    "phoneNumber1": "+43512555999",
+    "phoneNumber2": "+436641234567",
+
+    "eMailAddress": "john.doe@example.com",
+    "noEMailAddress": false,
+    "checkedEMailAddress": true,
+    "eMailBounceStatus": 0,
+
+    "inactive": false,
+    "correspondenceType": 1,
+    "noNewsletter": false,
+    "excludeFromSegment": false,
+
+    "webRole": "ADMIN",
+    "loginEMail": "john.doe@example.com",
+
+    "webshopContactSince": "2024-01-10T08:00:00Z",
+    "webshopLastLoginDate": "2026-07-16T14:00:00Z"
+  }
+}
