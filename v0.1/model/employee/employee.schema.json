@@ -59,6 +59,12 @@
             "description": "Identifies the role of the employee within the organization.",
             "x-status": "approved"
         },
+        "jobDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 100,
+            "description": "Identifies the role of the employee within the organization.",
+            "x-status": "approved"
+        },
         "phoneNumber": {
             "$ref": "../components/basetypes.schema.json#/$defs/phoneE164OrNull",
             "description": "Phone number of the employee.",
