@@ -1,0 +1,9 @@
+{
+    "id": "8f8665dd-b951-4806-a9e2-85dd5a0e5949",
+    "code": "10T3S20N",
+    "description": "10 Tage 3 % Skonto, 20 Tage netto",
+    "dueDateCalculation": "20T",
+    "discountDateCalculation": "10T3S20N",
+    "discountPercent": 3,
+    "tenantId": "0f1e2d3c-4b5a-4978-8091-a2b3c4d5e6f7"
+}

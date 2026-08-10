@@ -1,0 +1,58 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-08-10",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "code",
+        "description",
+        "dueDateCalculation",
+        "discountDateCalculation",
+        "discountPercent",
+        "tenantId"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the payment terms.",
+            "x-status": "approved"
+        },
+        "code": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The unique code identifying the payment terms.",
+            "x-status": "approved"
+        },
+        "description": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 100,
+            "description": "Description of the payment terms.",
+            "x-status": "approved"
+        },
+        "dueDateCalculation": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 30,
+            "description": "Expression used to calculate the payment due date.",
+            "x-status": "approved"
+        },
+        "discountDateCalculation": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineText",
+            "maxLength": 30,
+            "description": "Expression used to calculate the payment discount date.",
+            "x-status": "approved"
+        },
+        "discountPercent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Payment discount percentage.",
+            "x-status": "approved"
+        },
+        "tenantId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "UUID of the ERP tenant associated with the payment terms.",
+            "x-status": "approved"
+        }
+    }
+}

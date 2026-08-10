@@ -1,4 +1,4 @@
-{
+{ 
   "json.schemas": [
     {
       "fileMatch": [
@@ -42,6 +42,12 @@
         "**/v0.1/**/contact.example.json"
       ],
       "url": "./v0.1/model/contact/contact.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/v0.1/**/paymentTerms.example.json"
+      ],
+      "url": "./v0.1/model/paymentTerms/paymentTerms.schema.json"
     },
     {
       "fileMatch": [
