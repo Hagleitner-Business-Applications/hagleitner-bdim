@@ -33,6 +33,13 @@
     },
     {
       "fileMatch": [
+        "**/v0.1/**/address.example*.json",
+        "**/v0.1/**/address.example*.json"
+      ],
+      "url": "./v0.1/model/components/address.schema.json"
+    },
+    {
+      "fileMatch": [
         "**/v0.1/**/interactionLogEntry.example.json"
       ],
       "url": "./v0.1/model/interactionLogEntry/interactionLogEntry.schema.json"
