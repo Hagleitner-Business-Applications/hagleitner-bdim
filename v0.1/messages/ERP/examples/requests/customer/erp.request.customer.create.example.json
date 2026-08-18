@@ -65,8 +65,8 @@
     },
     "billingAndPayment": {
       "customerPriceGroupId": "31f2fa8a-6511-4f18-a877-42eb4a0c0494",
-      "isPriceGroupCustomer": true,
-      "priceBookGroupId": "1eb6db41-55c7-4c0d-8f01-1b2fbc5dd29a",
+      "isPriceBookCustomer": true,
+      "priceBookGroupCode": "F",
       "ignoreMaterialSurcharge": false,
       "excludeFromMinQuantitySurcharge": true,
       "salesOnlyWithSpecialPrice": false,

@@ -332,14 +332,14 @@
                     "description": "UUID referencing the customer price group that is assigned to the customer.",
                     "x-status": "approved"
                 },
-                "isPriceGroupCustomer": {
+                "isPriceBookCustomer": {
                     "type": "boolean",
                     "default": false,
                     "x-status": "approved"
                 },
-                "priceBookGroupId": {
-                    "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
-                    "description": "can only be set if the isPriceGroupCustomer is set to true",
+                "priceBookGroupCode": {
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+                    "description": "can only be set if the isPriceBookCustomer is set to true",
                     "x-status": "approved"
                 },
                 "ignoreMaterialSurcharge": {
@@ -441,6 +441,13 @@
             "properties": {
                 "customerGroupId": {
                     "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
+                    "x-status": "approved"
+                },
+                "customerGroupCode": {
+                    "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+                    "x-status": "approved"
+                },"customerGroupDescription": {
+                    "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 },
                 "membershipNumber": {
