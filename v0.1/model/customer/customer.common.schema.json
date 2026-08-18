@@ -1,5 +1,5 @@
 {
-    "$id": "https://schema.hagleitner.com/bdim/v0.1/customer.common.schema.json",
+    "$id": "customer.common.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "x-revision": "2026-05-11",
     "description": "This it the schema for common customer properties that are shared accoss different sytems. Entities of this schema can be owned by different source systems.",

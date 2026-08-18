@@ -3,7 +3,7 @@
 The BDIM uses a single, monotonically increasing version (e.g. `v0.1`, `v0.2`, `v1.0`). Each version lives in its own folder, and that version is part of every schema's `$id`:
 
 ```
-https://schema.hagleitner.com/bdim/v0.1/<area>/<name>.schema.json
+<area>/<name>.schema.json
 ```
 
 A new version is published only for breaking changes. Non-breaking changes are made in place within the current version.

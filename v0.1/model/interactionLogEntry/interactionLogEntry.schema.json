@@ -1,5 +1,5 @@
 {
-    "$id": "https://schema.hagleitner.com/bdim/v0.1/interactionLogEntry.schema.json",
+    "$id": "interactionLogEntry.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "x-revision": "2026-06-07",
     "type": "object",
