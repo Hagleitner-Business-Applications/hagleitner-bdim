@@ -9,8 +9,7 @@
         "name1",
         "customerRelations",
         "languageTag",
-        "createdAt",
-        "contentHash"
+        "createdAt"
     ],
     "properties": {
         "id": {
@@ -505,11 +504,6 @@
         "updatedById": {
             "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
             "description": "UUID of the employee who last updated the customer.",
-            "x-status": "approved"
-        },
-        "contentHash": {
-            "type": "string",
-            "description": "Hash value calculated by the owning system based on the content of the customer record. The content hash is used to detect changes in the customer record and to determine whether updates are needed when synchronizing customer data across systems.",
             "x-status": "approved"
         }
     },

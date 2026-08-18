@@ -85,10 +85,6 @@
             "maxLength": 10,
             "description": "The code of the customer price group associated with the employee.",
             "x-status": "approved"
-         },
-         "contentHash": {
-            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
-            "description": "Hash of the customer content for change detection."
-        }
+         }
     }
 }

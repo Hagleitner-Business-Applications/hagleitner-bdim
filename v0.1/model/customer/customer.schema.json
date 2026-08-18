@@ -5,12 +5,6 @@
     "description": "Customer",
     "type": "object",
     "unevaluatedProperties": false,
-    "properties": {
-        "contentHash": {
-            "$ref": "../components/basetypes.schema.json#/$defs/contentHash",
-            "description": "Hash of the customer content for change detection."
-        }
-    },
     "allOf": [
         {
             "$ref": "customer.common.schema.json"

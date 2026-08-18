@@ -50,7 +50,6 @@
             ],
             "format": "email"
         },
-
         "contentHash": {
             "type": "string",
             "minLength": 64,
