@@ -246,11 +246,15 @@
             "x-status": "approved"
         },
         "salesFunnelStage": {
-            "type": "string",
+            "type": [
+                "string",
+                "null"
+            ],
             "enum": [
                 "NewCustomer",
                 "ExistingCustomer",
-                "TargetCustomer"
+                "TargetCustomer",
+                null
             ],
             "description": "The sales funnel stage of the customer (from the ERP).",
             "x-status": "approved"
