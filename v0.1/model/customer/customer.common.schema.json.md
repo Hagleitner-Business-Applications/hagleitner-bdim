@@ -36,8 +36,8 @@ Separate entity
 ### `languageTag`
 BCP47 language tag, it is also used to derive the locale or culture with formatting conventions. 
 
-### `timezone`
-Only canonical IANA timeZones are allowed
+### ``
+Only canonical IANA s are allowed
 
 ### `taxNumbers`
 

@@ -83,13 +83,6 @@
             "description": "A BCP47 language tag that identifies the language context, often including region or script. The language tag is used as the key for resolving a locale or culture with concrete formatting conventions.",
             "x-status": "approved"
         },
-        "timezone": {
-            "type": "string",
-            "pattern": "^[A-Za-z]+/[A-Za-z_]+(?:/[A-Za-z_]+)?$",
-            "description": "The IANA time zone identifier representing the customer's time zone, such as 'America/New_York' or 'Europe/Berlin'.",
-            "default": "Etc/UTC",
-            "x-status": "approved"
-        },
         "taxNumbers": {
             "type": "object",
             "properties": {

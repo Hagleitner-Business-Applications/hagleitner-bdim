@@ -24,7 +24,6 @@
     "blockedFor": "shipping",
     "blockedForReason": "Customer requested temporary shipping block",
     "languageTag": "de-AT",
-    "timezone": "Europe/Vienna",
     "taxNumbers": {
       "vatNumber": "ATU12345678",
       "eoriNumber": "AT1234567890",
@@ -121,7 +120,6 @@
     "createdAt": "2020-03-18T10:58:00Z",
     "createdById": "22222222-2222-4222-8222-222222222222",
     "updatedAt": "2026-06-23T09:25:00Z",
-    "updatedById": "22222222-2222-4222-8222-222222222222",
-    
+    "updatedById": "22222222-2222-4222-8222-222222222222"
   }
 }
