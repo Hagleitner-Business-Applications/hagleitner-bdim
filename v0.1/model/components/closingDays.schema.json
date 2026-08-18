@@ -1,0 +1,47 @@
+{
+  "$id": "closingDays.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-08-18",
+  "description": "Closing days for a defined date range.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "startingDate",
+    "endingDate"
+  ],
+  "properties": {
+    "seasonCode": {
+      "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull"
+    },
+    "area": {
+      "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull"
+    },
+    "startingDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endingDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "weekday": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        null
+      ]
+    },
+    "daysOffComment": {
+      "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull"
+    }
+  }
+}

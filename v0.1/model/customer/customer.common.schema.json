@@ -446,7 +446,8 @@
                 "customerGroupCode": {
                     "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
                     "x-status": "approved"
-                },"customerGroupDescription": {
+                },
+                "customerGroupDescription": {
                     "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
                     "x-status": "approved"
                 },
@@ -485,8 +486,50 @@
             "x-status": "approved"
         },
         "openingHours": {
-            "$ref": "../components/openingHours.schema.json",
-            "x-status": "needsDiscussion"
+            "type": "array",
+            "items": {
+                "$ref": "../components/openinghours.schema.json"
+            }
+        },
+        "closingDays": {
+            "type": "array",
+            "items": {
+                "$ref": "../components/closingDays.schema.json"
+            }
+        },
+        "address1": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "address2": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "postalCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "city": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "stateOrProvince": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "countryCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "x-status": "approved"
+        },
+        "geoLocation": {
+            "latitude": {
+                "type": "number",
+                "x-status": "approved"
+            },
+            "longitude": {
+                "type": "number",
+                "x-status": "approved"
+            }
         },
         "createdAt": {
             "type": "string",
@@ -509,40 +552,14 @@
             "$ref": "../components/basetypes.schema.json#/$defs/uuidOrNull",
             "description": "UUID of the employee who last updated the customer.",
             "x-status": "approved"
-        }
-    },
-    "allOf": [
-        {
-            "$ref": "../components/address.schema.json"
         },
-        {
-            "if": {
-                "properties": {
-                    "blockedFor": {
-                        "enum": [
-                            "shipping",
-                            "invoicing",
-                            "all"
-                        ]
-                    }
-                },
-                "required": [
-                    "blockedFor"
-                ]
-            },
-            "then": {
-                "required": [
-                    "blockedForReason"
-                ]
-            }
+        "dependentRequired": {
+            "name2": [
+                "name1"
+            ],
+            "blockedForReason": [
+                "blockedFor"
+            ]
         }
-    ],
-    "dependentRequired": {
-        "name2": [
-            "name1"
-        ],
-        "blockedForReason": [
-            "blockedFor"
-        ]
     }
 }

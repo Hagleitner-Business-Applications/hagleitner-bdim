@@ -1,112 +1,15 @@
 {
-    "intervals": [
-        {
-            "seasonCode": "Summer",
-            "area": "All",
-            "startingDate": "2026-04-01",
-            "endingDate": "2026-09-30",
-            "days": [
-                {
-                    "opensAt": "07:30",
-                    "closesAt": "12:00",
-                    "weekdays": [
-                        "monday",
-                        "tuesday",
-                        "wednesday",
-                        "thursday",
-                        "friday"
-                    ]
-                },
-                {
-                    "opensAt": "13:00",
-                    "closesAt": "17:30",
-                    "weekdays": [
-                        "monday",
-                        "tuesday",
-                        "wednesday",
-                        "thursday",
-                        "friday"
-                    ]
-                },
-                {
-                    "opensAt": "08:00",
-                    "closesAt": "12:00",
-                    "weekdays": [
-                        "saturday"
-                    ]
-                }
-            ]
-        },
-        {
-            "seasonCode": "Winter",
-            "area": "Service",
-            "startingDate": "2026-10-01",
-            "endingDate": "2027-03-31",
-            "days": [
-                {
-                    "opensAt": "08:00",
-                    "closesAt": "12:00",
-                    "weekdays": [
-                        "monday",
-                        "tuesday",
-                        "wednesday",
-                        "thursday",
-                        "friday"
-                    ]
-                },
-                {
-                    "opensAt": "13:00",
-                    "closesAt": "16:00",
-                    "weekdays": [
-                        "monday",
-                        "wednesday",
-                        "friday"
-                    ]
-                }
-            ]
-        },
-        {
-            "seasonCode": null,
-            "area": "Shipment",
-            "startingDate": "2026-01-01",
-            "endingDate": "2026-12-31",
-            "days": [
-                {
-                    "opensAt": "06:00",
-                    "closesAt": "10:00",
-                    "weekdays": [
-                        "monday",
-                        "tuesday",
-                        "wednesday",
-                        "thursday",
-                        "friday",
-                        "saturday"
-                    ]
-                }
-            ]
-        }
-    ],
-    "closingDays": [
-        {
-            "startAt": "2026-12-24T12:00:00Z",
-            "endAt": "2026-12-26T23:59:59Z",
-            "seasonCode": null,
-            "area": null,
-            "reason": "Christmas closure"
-        },
-        {
-            "startAt": "2026-08-15T00:00:00Z",
-            "endAt": "2026-08-15T23:59:59Z",
-            "seasonCode": "Summer",
-            "area": "Service",
-            "reason": "Regional public holiday"
-        },
-        {
-            "startAt": "2027-01-01T00:00:00Z",
-            "endAt": "2027-01-01T23:59:59Z",
-            "seasonCode": "Winter",
-            "area": "All",
-            "reason": "New Year"
-        }
-    ]
+    "seasonCode": "SOMMER",
+    "area": "Salesperson",
+    "startingDate": "2026-03-01",
+    "endingDate": "2026-10-31",
+    "opensAt": "12:00",
+    "closesAt": "15:00",
+    "monday": false,
+    "tuesday": true,
+    "wednesday": false,
+    "thursday": true,
+    "friday": true,
+    "saturday": false,
+    "sunday": false
 }

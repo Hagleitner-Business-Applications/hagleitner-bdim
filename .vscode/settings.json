@@ -29,7 +29,13 @@
         "**/v0.1/**/openingHours.example*.json",
         "**/v0.1/**/openinghours.example*.json"
       ],
-      "url": "./v0.1/model/components/openingHours.schema.json"
+      "url": "./v0.1/model/components/openinghours.schema.json"
+    },    {
+      "fileMatch": [
+        "**/v0.1/**/closingDays.example*.json",
+        "**/v0.1/**/closingdays.example*.json"
+      ],
+      "url": "./v0.1/model/components/closingDays.schema.json"
     },
     {
       "fileMatch": [
