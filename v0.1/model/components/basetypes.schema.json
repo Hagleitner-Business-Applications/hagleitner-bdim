@@ -34,7 +34,7 @@
                 }
             ],
             "description": "UUID or null."
-        },       
+        },
         "phoneE164OrNull": {
             "type": [
                 "string",
@@ -138,12 +138,26 @@
             },
             "minItems": 1,
             "description": "An array of translations for a given text property, where each translation includes a language tag and the corresponding translated text."
-        },        
+        },
         "base64": {
             "type": "string",
             "contentEncoding": "base64",
             "description": "Base64-encoded binary data."
+        },
+        "areaOrNull": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                null,
+                "Shipment",
+                "Service",
+                "Maintenance",
+                "Salesperson",
+                "All"
+            ],
+            "description": "Defines the business area to which the opening or closing hours apply."
         }
-  
     }
 }

@@ -14,7 +14,7 @@
       "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull"
     },
     "area": {
-      "$ref": "basetypes.schema.json#/$defs/singleLineTextOrNull"
+      "$ref": "basetypes.schema.json#/$defs/areaOrNull"
     },
     "startingDate": {
       "type": "string",
