@@ -65,10 +65,9 @@
             "x-status": "approved"
         },
         "positionCode": {
-            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
-            "maxLength": 10,
-            "description": "Code identifying the contact's position within the organization.",
-            "x-status": "needsDiscussion"
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "Globally unique identifier (GUID) identifying the contact's position within the organization.",
+            "x-status": "approved"
         },
         "language": {
             "anyOf": [
