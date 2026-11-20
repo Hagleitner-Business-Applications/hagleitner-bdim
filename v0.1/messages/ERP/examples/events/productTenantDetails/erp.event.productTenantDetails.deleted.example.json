@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "productTenantDetails",
+  "operation": "deleted",
+  "occurredAt": "2026-06-23T09:25:00Z",
+  "payload": {
+    "id": "4f8665dd-b951-4806-a9e2-85dd5a0e5949"
+  }
+}

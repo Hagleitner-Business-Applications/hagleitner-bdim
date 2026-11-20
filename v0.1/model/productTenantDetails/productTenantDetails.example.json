@@ -1,0 +1,13 @@
+{
+  "id": "4f8665dd-b951-4806-a9e2-85dd5a0e5949",
+  "itemNumber": "422020041900",
+  "tenantId": "777775dd-b951-4806-a9e2-85dd5a066666",
+  "itemStatusCode": "AKTIV",
+  "blocked": false,
+  "blockedForSale": false,
+  "blockedForLogistics": false,
+  "allowedResponsibilityCenters": [
+    "333334dd-b951-4806-a9e2-85dd5a0e6879",
+    "881234dd-b951-4806-a9e2-85dd58888888"
+  ]
+}
