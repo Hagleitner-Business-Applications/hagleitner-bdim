@@ -1,0 +1,65 @@
+{
+    "$id": "productTenantDetails.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-11-20",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "itemNumber",
+        "tenantId"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the product tenant details record.",
+            "x-status": "approved"
+        },
+        "itemNumber": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The product item number.",
+            "x-status": "approved"
+        },
+        "tenantId": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the tenant.",
+            "x-status": "approved"
+        },
+        "itemStatusCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "The item status code for this tenant.",
+            "x-status": "approved"
+        },
+        "blocked": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is blocked globally.",
+            "x-status": "approved"
+        },
+        "blockedForSale": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is blocked for sales in this tenant.",
+            "x-status": "approved"
+        },
+        "blockedForLogistics": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is blocked for logistics in this tenant.",
+            "x-status": "approved"
+        },
+        "allowedResponsibilityCenters": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "../components/basetypes.schema.json#/$defs/uuid"
+            },
+            "description": "Array of responsibility center IDs where this product is allowed to be used.",
+            "x-status": "approved"
+        }
+    }
+}

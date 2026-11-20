@@ -1,0 +1,298 @@
+{
+    "$id": "product.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-11-20",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "itemNumber",
+        "description",
+        "baseUnitOfMeasureCode"
+    ],
+    "properties": {
+        "id": {
+            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "description": "The unique identifier for the product.",
+            "x-status": "approved"
+        },
+        "itemNumber": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The product item number.",
+            "x-status": "approved"
+        },
+        "description": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 100,
+            "description": "The product description.",
+            "x-status": "approved"
+        },
+        "description2": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "Secondary product description.",
+            "x-status": "approved"
+        },
+        "searchDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 100,
+            "description": "Searchable description for the product.",
+            "x-status": "approved"
+        },
+        "itemCategoryCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "The item category code.",
+            "x-status": "approved"
+        },
+        "itemCategoryDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 100,
+            "description": "Description of the item category.",
+            "x-status": "approved"
+        },
+        "itemStatusCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "The item status code.",
+            "x-status": "approved"
+        },
+        "unNumber": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "UN number for dangerous goods.",
+            "x-status": "approved"
+        },
+        "netWeight": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "description": "Net weight of the product.",
+            "x-status": "approved"
+        },
+        "grossWeight": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "description": "Gross weight of the product.",
+            "x-status": "approved"
+        },
+        "adrnetWeight": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "description": "ADR net weight for dangerous goods.",
+            "x-status": "approved"
+        },
+        "itemClass": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "Item classification code.",
+            "x-status": "approved"
+        },
+        "mainGroup": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 2,
+            "description": "Main product group code.",
+            "x-status": "approved"
+        },
+        "mainGroupDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "Description of the main group.",
+            "x-status": "approved"
+        },
+        "subGroup": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 2,
+            "description": "Sub group code within the main group.",
+            "x-status": "approved"
+        },
+        "subGroupDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "Description of the sub group.",
+            "x-status": "approved"
+        },
+        "barrel": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 2,
+            "description": "Barrel/packaging code.",
+            "x-status": "approved"
+        },
+        "barrelDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "Description of barrel/packaging.",
+            "x-status": "approved"
+        },
+        "specificAppearance": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 2,
+            "description": "Specific appearance code.",
+            "x-status": "approved"
+        },
+        "specificAppearanceDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 30,
+            "description": "Description of specific appearance.",
+            "x-status": "approved"
+        },
+        "itemCommissionGroupCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Product commission group code.",
+            "x-status": "approved"
+        },
+        "minimumSalesOrderQuantity": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "description": "Minimum quantity for sales orders.",
+            "x-status": "approved"
+        },
+        "dangerousGoodsClass": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "Dangerous goods classification.",
+            "x-status": "approved"
+        },
+        "dangerousGoodsPackagingCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "Dangerous goods packaging code.",
+            "x-status": "approved"
+        },
+        "dangerousGoodsDeliveryQuantity": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "description": "Quantity in overpack for dangerous goods.",
+            "x-status": "approved"
+        },
+        "blocked": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is blocked.",
+            "x-status": "approved"
+        },
+        "baseUnitOfMeasureCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 10,
+            "description": "Base unit of measure code.",
+            "x-status": "approved"
+        },
+        "baseUnitOfMeasureCodeDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "Description of base unit of measure.",
+            "x-status": "approved"
+        },
+        "salesUnitOfMeasureCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Sales unit of measure code.",
+            "x-status": "approved"
+        },
+        "salesUnitOfMeasureCodeDescription": {
+            "$ref": "../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "Description of sales unit of measure.",
+            "x-status": "approved"
+        },
+        "substitutionPoints": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Substitution points code.",
+            "x-status": "approved"
+        },
+        "mounting": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "Mounting requirement indicator.",
+            "x-status": "approved"
+        },
+        "sparePart": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is a spare part.",
+            "x-status": "approved"
+        },
+        "wearPart": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is a wear part.",
+            "x-status": "approved"
+        },
+        "repairableItem": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is repairable.",
+            "x-status": "approved"
+        },
+        "serviceItemGroup": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Service item group code.",
+            "x-status": "approved"
+        },
+        "noComplaintPossible": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates that no complaints are possible for this product.",
+            "x-status": "approved"
+        },
+        "unlimitedReturnable": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product can be returned without limits.",
+            "x-status": "approved"
+        },
+        "itemDiscountGroup": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "Item discount group code.",
+            "x-status": "approved"
+        },
+        "adBudgetDimension": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 20,
+            "description": "Ad budget dimension code.",
+            "x-status": "approved"
+        },
+        "qsCheckNecessary": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether quality check is necessary.",
+            "x-status": "approved"
+        },
+        "materialSurchargeCode": {
+            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "maxLength": 10,
+            "description": "Material surcharge code.",
+            "x-status": "approved"
+        },
+        "loanDispenser": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is a loan dispenser.",
+            "x-status": "approved"
+        },
+        "baseDispenser": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the product is a base dispenser.",
+            "x-status": "approved"
+        }
+    }
+}
