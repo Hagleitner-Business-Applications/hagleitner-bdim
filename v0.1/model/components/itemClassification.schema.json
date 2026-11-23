@@ -1,0 +1,38 @@
+{
+    "$id": "itemClassification.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-11-23",
+    "x-status": "draft",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "properties": {
+        "classificationCode": {
+            "anyOf": [
+                {
+                    "$ref": "../product/itemClassificationGroup/itemClassificationGroup.schema.json#/properties/code"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "description": "Code identifying the item classification group."
+        },
+        "classificationStartingDate": {
+            "type": ["string", "null"],
+            "format": "date",
+            "description": "Start date of the classification."
+        },
+        "classificationEndingDate": {
+            "type": ["string", "null"],
+            "format": "date",
+            "description": "End date of the classification."
+        },
+        "classificationNotValidInTenantIds": {
+            "type": "array",
+            "items": {
+                "$ref": "basetypes.schema.json#/$defs/uuid"
+            },
+            "description": "UUIDs of tenants in which the classification is not valid."
+        }
+    }
+}

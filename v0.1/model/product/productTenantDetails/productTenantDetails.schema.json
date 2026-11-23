@@ -11,23 +11,23 @@
     ],
     "properties": {
         "id": {
-            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "$ref": "../../components/basetypes.schema.json#/$defs/uuid",
             "description": "The unique identifier for the product tenant details record.",
             "x-status": "approved"
         },
         "itemNumber": {
-            "$ref": "../components/basetypes.schema.json#/$defs/code",
+            "$ref": "../../components/basetypes.schema.json#/$defs/code",
             "maxLength": 20,
             "description": "The product item number.",
             "x-status": "approved"
         },
         "tenantId": {
-            "$ref": "../components/basetypes.schema.json#/$defs/uuid",
+            "$ref": "../../components/basetypes.schema.json#/$defs/uuid",
             "description": "The unique identifier for the tenant.",
             "x-status": "approved"
         },
         "itemStatusCode": {
-            "$ref": "../components/basetypes.schema.json#/$defs/codeOrNull",
+            "$ref": "../../components/basetypes.schema.json#/$defs/codeOrNull",
             "maxLength": 10,
             "description": "The item status code for this tenant.",
             "x-status": "approved"
@@ -56,7 +56,7 @@
                 "null"
             ],
             "items": {
-                "$ref": "../components/basetypes.schema.json#/$defs/uuid"
+                "$ref": "../../components/basetypes.schema.json#/$defs/uuid"
             },
             "description": "Array of responsibility center IDs where this product is allowed to be used.",
             "x-status": "approved"

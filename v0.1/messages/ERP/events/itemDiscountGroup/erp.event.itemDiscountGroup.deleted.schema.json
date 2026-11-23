@@ -1,0 +1,36 @@
+{
+  "$id": "erp.event.itemDiscountGroup.deleted.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-11-23",
+  "x-status": "draft",
+  "title": "ERP Event item discount group deleted",
+  "description": "Schema for item discount group deleted events in ERP.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": ["messageVersion", "sourceSystem", "objectType", "operation", "occurredAt", "payload"],
+  "properties": {
+    "messageVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Message contract version.",
+      "x-layer": "business",
+      "x-status": "draft"
+    },
+    "sourceSystem": { "type": "string", "const": "ERP" },
+    "objectType": { "type": "string", "const": "itemDiscountGroup" },
+    "operation": { "type": "string", "const": "deleted" },
+    "occurredAt": { "type": "string", "format": "date-time" },
+    "payload": {
+      "type": "object",
+      "description": "Code of the deleted item discount group.",
+      "unevaluatedProperties": false,
+      "required": ["code"],
+      "properties": {
+        "code": {
+          "$ref": "../../../../model/components/basetypes.schema.json#/$defs/code",
+          "maxLength": 20
+        }
+      }
+    }
+  }
+}

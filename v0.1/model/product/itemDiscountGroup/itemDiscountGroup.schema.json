@@ -1,0 +1,43 @@
+{
+    "$id": "itemDiscountGroup.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-11-23",
+    "x-status": "draft",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "$ref": "../../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 20,
+            "description": "The identifier of the item discount group."
+        },
+        "description": {
+            "$ref": "../../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 100,
+            "description": "Description of the item discount group."
+        },
+        "notRelevant": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is not relevant."
+        },
+        "excludeFromDepPriceGen": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is excluded from dependent price generation."
+        },
+        "customerRelevant": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is relevant for customers."
+        },
+        "exclFromAutSalesPriceCalc": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is excluded from automatic sales price calculation."
+        },
+        "noPricebookLogic": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether price book logic does not apply to the group."
+        }
+    }
+}

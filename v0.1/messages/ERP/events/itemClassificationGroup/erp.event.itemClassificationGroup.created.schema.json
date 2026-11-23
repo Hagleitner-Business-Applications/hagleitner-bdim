@@ -1,0 +1,28 @@
+{
+  "$id": "erp.event.itemClassificationGroup.created.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-revision": "2026-11-23",
+  "x-status": "draft",
+  "title": "ERP Event item classification group created",
+  "description": "Schema for item classification group created events in ERP.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": ["messageVersion", "sourceSystem", "objectType", "operation", "occurredAt", "payload"],
+  "properties": {
+    "messageVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Message contract version.",
+      "x-layer": "business",
+      "x-status": "draft"
+    },
+    "sourceSystem": { "type": "string", "const": "ERP" },
+    "objectType": { "type": "string", "const": "itemClassificationGroup" },
+    "operation": { "type": "string", "const": "created" },
+    "occurredAt": { "type": "string", "format": "date-time" },
+    "payload": {
+      "description": "The created item classification group.",
+      "$ref": "../../../../model/product/itemClassificationGroup/itemClassificationGroup.schema.json"
+    }
+  }
+}

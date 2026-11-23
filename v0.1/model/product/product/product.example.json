@@ -43,5 +43,16 @@
   "qsCheckNecessary": true,
   "materialSurchargeCode": "MA-ZU",
   "loanDispenser": false,
-  "baseDispenser": false
+  "baseDispenser": false,
+  "itemClassifications": [
+    {
+      "classificationCode": "ALLGEMEIN",
+      "classificationStartingDate": "2026-10-01",
+      "classificationEndingDate": "2099-12-31",
+      "classificationNotValidInTenantIds": [
+        "3a1234dd-b951-4806-a9e2-85dd5a0e6879",
+        "881234dd-b951-4806-a9e2-85dd5a0e1234"
+      ]
+    }
+  ]
 }

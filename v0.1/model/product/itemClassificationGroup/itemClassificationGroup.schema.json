@@ -1,0 +1,36 @@
+{
+    "$id": "itemClassificationGroup.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "x-revision": "2026-11-23",
+    "x-status": "draft",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": [
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "$ref": "../../components/basetypes.schema.json#/$defs/code",
+            "maxLength": 10,
+            "description": "The identifier of the item classification group."
+        },
+        "description": {
+            "$ref": "../../components/basetypes.schema.json#/$defs/singleLineTextOrNull",
+            "maxLength": 50,
+            "description": "Description of the item classification group."
+        },
+        "type": {
+            "type": ["integer", "null"],
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, null],
+            "description": "Classification type: 0 unspecified, 1 price list, 2 HAD, 3 competition, 4 sales reporting, 5 webshop, 6 construction project, 7 add-on, 8 LB-innovation, 9 LB-dispenser, 10 explosive."
+        },
+        "notRelevantForReporting": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is not relevant for reporting."
+        },
+        "inactive": {
+            "type": ["boolean", "null"],
+            "description": "Indicates whether the group is inactive."
+        }
+    }
+}

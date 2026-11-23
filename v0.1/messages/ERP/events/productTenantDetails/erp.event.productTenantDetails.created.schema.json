@@ -47,7 +47,7 @@
       "description": "Event payload. Contains the created product tenant details.",
       "allOf": [
         {
-          "$ref": "../../../../model/productTenantDetails/productTenantDetails.schema.json"
+          "$ref": "../../../../model/product/productTenantDetails/productTenantDetails.schema.json"
         }
       ]
     }

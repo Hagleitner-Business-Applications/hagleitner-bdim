@@ -1,0 +1,9 @@
+{
+  "code": "1107",
+  "description": "Systemnachfüllung Flüssig",
+  "notRelevant": false,
+  "excludeFromDepPriceGen": false,
+  "customerRelevant": true,
+  "exclFromAutSalesPriceCalc": false,
+  "noPricebookLogic": false
+}
