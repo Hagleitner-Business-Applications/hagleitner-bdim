@@ -47,7 +47,7 @@
       "description": "Event payload. Contains the data of the updated product.",
       "allOf": [
         {
-          "$ref": "../../../../model/product/product.schema.json"
+          "$ref": "../../../../model/product/product/product.schema.json"
         }
       ]
     }

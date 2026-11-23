@@ -1,0 +1,14 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "itemClassificationGroup",
+  "operation": "updated",
+  "occurredAt": "2026-11-23T09:25:00Z",
+  "payload": {
+    "code": "ALLGEMEIN",
+    "description": "AddOn-Allgemein",
+    "type": 7,
+    "notRelevantForReporting": false,
+    "inactive": false
+  }
+}

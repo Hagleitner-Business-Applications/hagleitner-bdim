@@ -1,0 +1,10 @@
+{
+  "messageVersion": "1.0",
+  "sourceSystem": "ERP",
+  "objectType": "itemDiscountGroup",
+  "operation": "deleted",
+  "occurredAt": "2026-11-23T09:25:00Z",
+  "payload": {
+    "code": "1107"
+  }
+}
